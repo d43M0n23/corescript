@@ -3,12 +3,27 @@
 # create folder and subs
 # include scanner and katanaframework
 #
+###################
+# ToDo:
+# generate ssh.pub key
+# add key do source 4 sync script
+# create folder
+# install scripts & frameworks
+#
+##################
+
 ####################
 # CONFIG THIS PART #
 ####################
 
-maindir = c0r3
-framework = 01-frame
+main-dir = "c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
+frame-dir = "01-frame"		# framework ordner für diverse Scripte /Scanner Aux etc.
+space-dir = "02-workspace"	# Arbeitsplatz
+bot-dir = "03-botnet"		# Botnetze
+sync-dir = "04-h4cK3D"		# h4cK3R-stuff
+crack-dir "05-cracker"		# crack-engines
+script-dir "06-0wnsRipt"	# eigene Scripte
+wifi-dir = "07-wiF1"		# Wifi-Attacken
 ##################
 echo '+-------------------------------------------------+'
 echo '   ________                             _____   __ '
