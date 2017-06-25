@@ -16,15 +16,17 @@
 # CONFIG THIS PART #
 ####################
 
-main-dir = "c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
-frame-dir = "01-frame"		# framework ordner für diverse Scripte /Scanner Aux etc.
-space-dir = "02-workspace"	# Arbeitsplatz
-bot-dir = "03-botnet"		# Botnetze
-sync-dir = "04-h4cK3D"		# h4cK3R-stuff
-crack-dir "05-cracker"		# crack-engines
-script-dir "06-0wnsRipt"	# eigene Scripte
-wifi-dir = "07-wiF1"		# Wifi-Attacken
+main="73sTing"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
+frame="01-frame"		# framework ordner für diverse Scripte /Scanner Aux etc.
+space="02-workspace"	# Arbeitsplatz
+bot="03-botnet"		# Botnetze
+sync="04-h4cK3D"		# h4cK3R-stuff
+crack="05-cracker"		# crack-engines
+script="06-0wnsRipt"	# eigene Scripte
+wifi="07-wiF1"		# Wifi-Attacken
 ##################
+clear
+#################
 echo '+-------------------------------------------------+'
 echo '   ________                             _____   __ '
 echo '   ___  __ \_____ ____________ ____________  | / / '
@@ -61,58 +63,62 @@ echo '| 3.trity. 					|'
 echo '| 4.all.  					|'
 echo '+-------------------------------------------------+'
 echo 'Make a source deb-Update (y/n)'
-read -e deb-update
+read -e debupdate
 ##
 ## Schleife
 ##
-if [ '$deb-update' == n ] ; then
+if [ '$debupdate' == y ]; then
 
 apt-get update && apt-get upgrade -y
 apt-get dist-upgrade -y
 apt autoremove -y
-apt clean
+apt-get clean
 fi
 #exit
-clean
+clear
 echo "Ordner werden angelegt falls nicht vorhanden"
 ##
 ##
-if [ ! -d /root/c0r3/] ; then
-	mkdir /root/c0r3/
-	echo "c0r3 wurde angelegt"
-if
-cd /root/c0r3/
-if [ ! -d 01-frame] ; then
-	mkdir 01-frame
+if [ ! -d /root/${main}/ ]; then
+	mkdir /root/${main}/;
+	echo "${main} wurde angelegt"
+fi
+
+cd /root/${main}/
+
+if [ ! -d 01-frame ]; then
+	mkdir 01-frame;
 	echo "01-frame wurde angelegt"
 fi
-if [ ! -d mkdir 02-workspace] ; then
-        mkdir 02-workspace
+
+if [ ! -d 02-workspace ]; then
+       # mkdir 02-workspace
         echo "02-workspace wurde angelegt"
 fi
 
-if [ ! -d mkdir 03-botnet] ; then
+if [ ! -d 03-botnet ]; then
         mkdir 03-botnet
         echo "03-botnet wurde angelegt"
 fi
 
-if [ ! -d mkdir 04-h43D] ; then
+if [ ! -d 04-h43D ]; then
         mkdir 04-h43D
         echo "04-h43D wurde angelegt"
 fi
 
-if [ ! -d mkdir 05-crack] ; then
+if [ ! -d 05-crack ]; then
         mkdir 05-crack
         echo "05-crack wurde angelegt"
 fi
 
 #cd /root/c0r3/01-frame/
 echo "fehlende Ordner wurden erstellt."
-clear
+#clear
 #Script 1
 # Inurl
+cd 01-frame
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
-cd SCANNER-INURLBR-master
+cd SCANNER-INURLBR
 apt-get install php-curl -y
 #ls
 cd ..
