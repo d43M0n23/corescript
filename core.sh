@@ -62,20 +62,25 @@ echo '| 3.trity. 					|'
 echo '| 3.trity. 					|'
 echo '| 4.all.  					|'
 echo '+-------------------------------------------------+'
-echo 'Make a source deb-Update (y/n)'
-read -e debupdate
+#echo 'Make a source deb-Update (y/n)'
+#read -e debupdate
+read -p "Make a source deb-update (y/n)? " debupdate
 ##
 ## Schleife
 ##
-if [ '$debupdate' == y ]; then
-
-apt-get update && apt-get upgrade -y
-apt-get dist-upgrade -y
-apt autoremove -y
-apt-get clean
+if [ $debupdate = y ]; then
+	apt-get update && apt-get upgrade -y
+	apt-get dist-upgrade -y
+	apt autoremove -y
+	apt-get clean
+	echo "thx 4 update"
+else
+	echo "
+install without update!
+"
 fi
 #exit
-clear
+#clear
 echo "Ordner werden angelegt falls nicht vorhanden"
 ##
 ##
@@ -124,16 +129,16 @@ apt-get install php-curl -y
 cd ..
 sleep 5
 #echo 'Scanner-Inurl installed'
-clear
+#clear
 echo '+-------------------------------------------------+'
-echo '| inurlbr geladen und installiert			|'
+echo '| inurlbr geladen und installiert                 |'
 echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
 # Script 2 - Katana
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
-clear
+#clear
 echo '+-------------------------------------------------+'
 echo '| Katana geladen und installiert                  |'
 echo '+-------------------------------------------------+'
