@@ -8,24 +8,24 @@ corescript is a framework written in bash for making penetration testing, based 
 
 
 # STRUCTUR
-	<ul><li>01-frame
-		<ul><li>-arachni</li>
-		<li>-getsploit</li>
-		<li>-Katanaframework</li>
-		<li>-MITMf</li>
-		<li>-pybelt</li>
-		<li>-SCANNER-INURLBR</li>
-		<li>-Sniper</li>
-		<li>-TheFatRat</li>
-		<li>-Trity</li>
-		<li>-webpwn3r</li>
-		<li>-WPSeku</li>
-		<li>-xerosploit</li>
-		<li>-xsscrapy</li></ul></li>
+<ul><li>01-frame
+	<ul><li>-arachni</li>
+	<li>-getsploit</li>
+	<li>-Katanaframework</li>
+	<li>-MITMf</li>
+	<li>-pybelt</li>
+	<li>-SCANNER-INURLBR</li>
+	<li>-Sniper</li>
+	<li>-TheFatRat</li>
+	<li>-Trity</li>
+	<li>-webpwn3r</li>
+	<li>-WPSeku</li>
+	<li>-xerosploit</li>
+	<li>-xsscrapy</li></ul></li>
 	<li>02-workspace
-		<ul><li>-0wn-Kali-build</li>
-		<li>-kali-nethunter</li>
-		<li>-0wn-kalirpi3</li></ul></li>
+	<ul><li>-0wn-Kali-build</li>
+	<li>-kali-nethunter</li>
+	<li>-0wn-kalirpi3</li></ul></li>
 </ul>
 
 
