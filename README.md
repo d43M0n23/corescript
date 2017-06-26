@@ -8,11 +8,7 @@ corescript is a framework written in bash for making penetration testing, based 
 
 
 # STRUCTUR
-<style>
-ul {
-  list-style-type: none;
-}
-</style>
+
 <ul><li>01-frame
 	<ul><li>-arachni</li>
 	<li>-getsploit</li>
