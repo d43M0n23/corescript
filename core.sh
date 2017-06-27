@@ -1,7 +1,7 @@
 #!/bin/bash
 # corescript v.1
 # create folder and subs
-# include scanner and katanaframework
+# include Frames,Aux;Attack
 #
 ###################
 # ToDo:
@@ -62,8 +62,6 @@ echo '| 3.trity. 					|'
 echo '| 3.trity. 					|'
 echo '| 4.all.  					|'
 echo '+-------------------------------------------------+'
-#echo 'Make a source deb-Update (y/n)'
-#read -e debupdate
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
 ## Schleife
@@ -91,45 +89,52 @@ fi
 
 cd /root/${main}/
 
-if [ ! -d 01-frame ]; then
-	mkdir 01-frame;
-	echo "01-frame wurde angelegt"
+if [ ! -d ${frame} ]; then
+	mkdir ${frame};
+	echo "${frame} wurde angelegt"
 fi
 
-if [ ! -d 02-workspace ]; then
-       # mkdir 02-workspace
-        echo "02-workspace wurde angelegt"
+if [ ! -d ${space} ]; then
+        mkdir ${space}
+        echo "${space} wurde angelegt"
 fi
 
-if [ ! -d 03-botnet ]; then
-        mkdir 03-botnet
-        echo "03-botnet wurde angelegt"
+if [ ! -d ${bot} ]; then
+        mkdir ${bot}
+        echo "${bot} wurde angelegt"
 fi
 
-if [ ! -d 04-h43D ]; then
-        mkdir 04-h43D
-        echo "04-h43D wurde angelegt"
+if [ ! -d ${sync} ]; then
+        mkdir ${sync}
+        echo "${sync} wurde angelegt"
 fi
 
-if [ ! -d 05-crack ]; then
-        mkdir 05-crack
-        echo "05-crack wurde angelegt"
+if [ ! -d ${script} ]; then
+        mkdir ${script}
+        echo "${script} wurde angelegt"
 fi
 
-#cd /root/c0r3/01-frame/
+if [ ! -d ${wifi} ]; then
+        mkdir ${wifi}
+        echo "${wifi} wurde angelegt"
+fi
+
+if [ ! -d ${main} ]; then
+        mkdir ${main}
+        echo "${main} wurde angelegt"
+fi
+
+
 echo "fehlende Ordner wurden erstellt."
-#clear
-#Script 1
-# Inurl
-cd 01-frame
+###
+# INSTALL SCRIPTS,AUX,FRAMES
+# 
+cd ${main}
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
 cd SCANNER-INURLBR
 apt-get install php-curl -y
-#ls
 cd ..
 sleep 5
-#echo 'Scanner-Inurl installed'
-#clear
 echo '+-------------------------------------------------+'
 echo '| inurlbr geladen und installiert                 |'
 echo '+-------------------------------------------------+'
@@ -138,12 +143,11 @@ echo '+-------------------------------------------------+'
 read TASTE
 # Script 2 - Katana
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
-#clear
 echo '+-------------------------------------------------+'
 echo '| Katana geladen und installiert                  |'
 echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
-echo "a11 d43M0n23 s0urc3s geladen - cyA"
+#echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
