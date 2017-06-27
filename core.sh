@@ -60,7 +60,7 @@ echo '| 5.Pybelt. 					|'
 echo '| 6.Scanner-Inurl-BR. 				|'
 echo '| 7.Sn1per. 					|'
 echo '| 8.TheFatRat.                                    |'
-echo '| 9.TheFatRat. 					|'
+echo '| 9.Trity. 					|'
 echo '| 10.Webpwn3r.  					|'
 echo '| 11.WPSeku.                                      |'
 echo '| 12.Xerosploit.                                  |'
@@ -138,7 +138,23 @@ echo "fehlende Ordner wurden erstellt."
 cd ${main}
 ####
 #1.Arachni.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Arachni geladen und installiert                 |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
 #2.Getsploit.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Getsploit geladen und installiert               |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
 #3.Katana-Framework.
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
 sleep 5
@@ -150,7 +166,23 @@ echo '+-------------------------------------------------+'
 read TASTE
 
 #4.MITMf.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| MITMf geladen und installiert                   |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
 #5.Pybelt.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Pybelt geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
 #6.Scanner-Inurl-BR.
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
 cd SCANNER-INURLBR
@@ -165,13 +197,67 @@ echo '+-------------------------------------------------+'
 read TASTE
 
 #7.Sn1per.
-#8.TheFatRat.
-#9.TheFatRat.
-#10.Webpwn3r.
-#11.WPSeku.
-#12.Xerosploit.
-#13.Xsscrapy.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Katana geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
 
+#8.TheFatRat.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| TheFatRat geladen und installiert               |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#9.Trity.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Trity geladen und installiert                   |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#10.Webpwn3r.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Webpwn3r geladen und installiert                |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#11.WPSeku.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| WPSeku geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#12.Xerosploit.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Xerosploit geladen und installiert              |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#13.Xsscrapy.
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Xss-Crapy geladen und installiert               |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
 
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
