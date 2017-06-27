@@ -50,17 +50,22 @@ echo '+-------------------------------------------------+'
 read -e TASTE
 clear
 echo '+-------------------------------------------------+'
-echo '| Own-Scripts and anonymous                       |'
+echo '| Own-Scripts, Aux & Attacker-Frames              |'
 echo '+-------------------------------------------------+'
-echo '| 1.Inurlbr - Dork. 		                |'
-echo '| 2.katana Frame.    		                |'
-echo '| 3.trity. 					|'
-echo '| 3.trity. 					|'
-echo '| 3.trity. 					|'
-echo '| 3.trity. 					|'
-echo '| 3.trity. 					|'
-echo '| 3.trity. 					|'
-echo '| 4.all.  					|'
+echo '| 1.Arachni.	 		                |'
+echo '| 2.Getsploit.    		                |'
+echo '| 3.Katana-Framework 				|'
+echo '| 4.MITMf. 					|'
+echo '| 5.Pybelt. 					|'
+echo '| 6.Scanner-Inurl-BR. 				|'
+echo '| 7.Sn1per. 					|'
+echo '| 8.TheFatRat.                                    |'
+echo '| 9.TheFatRat. 					|'
+echo '| 10.Webpwn3r.  					|'
+echo '| 11.WPSeku.                                      |'
+echo '| 12.Xerosploit.                                  |'
+echo '| 13.Xsscrapy.                                    |'
+echo '| 14.all.                                         |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -109,6 +114,11 @@ if [ ! -d ${sync} ]; then
         echo "${sync} wurde angelegt"
 fi
 
+if [ ! -d ${crack} ]; then
+        mkdir ${crack}
+        echo "${crack} wurde angelegt"
+fi
+
 if [ ! -d ${script} ]; then
         mkdir ${script}
         echo "${script} wurde angelegt"
@@ -119,10 +129,6 @@ if [ ! -d ${wifi} ]; then
         echo "${wifi} wurde angelegt"
 fi
 
-if [ ! -d ${main} ]; then
-        mkdir ${main}
-        echo "${main} wurde angelegt"
-fi
 
 
 echo "fehlende Ordner wurden erstellt."
@@ -130,6 +136,22 @@ echo "fehlende Ordner wurden erstellt."
 # INSTALL SCRIPTS,AUX,FRAMES
 # 
 cd ${main}
+####
+#1.Arachni.
+#2.Getsploit.
+#3.Katana-Framework.
+git clone 'https://github.com/PowerScript/KatanaFramework.git'
+sleep 5
+echo '+-------------------------------------------------+'
+echo '| Katana geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+#4.MITMf.
+#5.Pybelt.
+#6.Scanner-Inurl-BR.
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
 cd SCANNER-INURLBR
 apt-get install php-curl -y
@@ -141,13 +163,16 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
-# Script 2 - Katana
-git clone 'https://github.com/PowerScript/KatanaFramework.git'
-echo '+-------------------------------------------------+'
-echo '| Katana geladen und installiert                  |'
-echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
-#echo "a11 d43M0n23 s0urc3s geladen - cyA"
+
+#7.Sn1per.
+#8.TheFatRat.
+#9.TheFatRat.
+#10.Webpwn3r.
+#11.WPSeku.
+#12.Xerosploit.
+#13.Xsscrapy.
+
+
+#Final MSG
+echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
