@@ -142,7 +142,7 @@ cd ${frame}
 wget https://github.com/Arachni/arachni/releases/download/v1.5.1/arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 tar xfz arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 rm arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Arachni geladen und installiert                 |'
 echo '+-------------------------------------------------+'
@@ -155,7 +155,7 @@ git clone https://github.com/vulnersCom/getsploit.git
 cd getsploit
 python getsploit.py
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Getsploit geladen und installiert               |'
 echo '+-------------------------------------------------+'
@@ -165,7 +165,7 @@ read TASTE
 
 #3.Katana-Framework.
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Katana geladen und installiert                  |'
 echo '+-------------------------------------------------+'
@@ -179,7 +179,7 @@ git clone https://github.com/byt3bl33d3r/MITMf
 cd MITMf
 git submodule init && git submodule update --recursive
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| MITMf geladen und installiert                   |'
 echo '+-------------------------------------------------+'
@@ -192,7 +192,7 @@ git clone https://github.com/ekultek/pybelt.git
 cd pybelt
 pip install -r requirements.txt
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Pybelt geladen und installiert                  |'
 echo '+-------------------------------------------------+'
@@ -205,7 +205,7 @@ git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
 cd SCANNER-INURLBR
 apt-get install php-curl -y
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| inurlbr geladen und installiert                 |'
 echo '+-------------------------------------------------+'
@@ -219,7 +219,7 @@ cd Sn1per
 chmod +x install.sh
 ./install.sh
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Sn1per geladen und installiert                  |'
 echo '+-------------------------------------------------+'
@@ -232,7 +232,7 @@ git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
 chmod +x setup.sh && ./setup.sh
 cd ..
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| TheFatRat geladen und installiert               |'
 echo '+-------------------------------------------------+'
@@ -246,7 +246,7 @@ cd Trity
 python install.py
 cd ..
 
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Trity geladen und installiert                   |'
 echo '+-------------------------------------------------+'
@@ -256,7 +256,7 @@ read TASTE
 
 #10.Webpwn3r.
 git clone https://github.com/zigoo0/webpwn3r.git
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Webpwn3r geladen und installiert                |'
 echo '+-------------------------------------------------+'
@@ -266,7 +266,7 @@ read TASTE
 
 #11.WPSeku.
 git clone https://github.com/m4ll0k/WPSeku.git
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| WPSeku geladen und installiert                  |'
 echo '+-------------------------------------------------+'
@@ -277,7 +277,7 @@ read TASTE
 #12.Xerosploit.
 git clone https://github.com/LionSec/xerosploit.git
 cd xerosploit && python install.py
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xerosploit geladen und installiert              |'
 echo '+-------------------------------------------------+'
@@ -292,7 +292,7 @@ pip install -r requirements.txt
 python xsscrapy.py -h
 cd ..
 
-sleep 5
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xss-Crapy geladen und installiert               |'
 echo '+-------------------------------------------------+'
