@@ -140,7 +140,8 @@ cd ${frame}
 #01-FRAME
 #1.Arachni.
 wget https://github.com/Arachni/arachni/releases/download/v1.5.1/arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
-tar xfvz arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
+tar xfz arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
+rm arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 sleep 5
 echo '+-------------------------------------------------+'
 echo '| Arachni geladen und installiert                 |'
@@ -187,6 +188,10 @@ echo '+-------------------------------------------------+'
 read TASTE
 
 #5.Pybelt.
+git clone https://github.com/ekultek/pybelt.git
+cd pybelt
+pip install -r requirements.txt
+cd ..
 sleep 5
 echo '+-------------------------------------------------+'
 echo '| Pybelt geladen und installiert                  |'
@@ -210,7 +215,7 @@ read TASTE
 
 #7.Sn1per.
 git clone https://github.com/1N3/Sn1per.git
-cd sn1per
+cd Sn1per
 chmod +x install.sh
 ./install.sh
 cd ..
