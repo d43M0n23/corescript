@@ -16,7 +16,7 @@
 # CONFIG THIS PART #
 ####################
 
-main="73sTing"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
+main="c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
 frame="01-frame"		# framework ordner für diverse Scripte /Scanner Aux etc.
 space="02-workspace"	# Arbeitsplatz
 bot="03-botnet"		# Botnetze
@@ -52,16 +52,16 @@ clear
 echo '+-------------------------------------------------+'
 echo '| Own-Scripts, Aux & Attacker-Frames              |'
 echo '+-------------------------------------------------+'
-echo '| 1.Arachni.	 		                |'
-echo '| 2.Getsploit.    		                |'
-echo '| 3.Katana-Framework 				|'
-echo '| 4.MITMf. 					|'
-echo '| 5.Pybelt. 					|'
-echo '| 6.Scanner-Inurl-BR. 				|'
-echo '| 7.Sn1per. 					|'
+echo '| 1.Arachni.                                      |'
+echo '| 2.Getsploit.                                    |'
+echo '| 3.Katana-Framework.                             |'
+echo '| 4.MITMf.                                        |'
+echo '| 5.Pybelt.                                       |'
+echo '| 6.Scanner-Inurl-BR.                             |'
+echo '| 7.Sn1per.                                       |'
 echo '| 8.TheFatRat.                                    |'
-echo '| 9.Trity. 					|'
-echo '| 10.Webpwn3r.  					|'
+echo '| 9.Trity.                                        |'
+echo '| 10.Webpwn3r.                                    |'
 echo '| 11.WPSeku.                                      |'
 echo '| 12.Xerosploit.                                  |'
 echo '| 13.Xsscrapy.                                    |'
