@@ -135,9 +135,12 @@ echo "fehlende Ordner wurden erstellt."
 ###
 # INSTALL SCRIPTS,AUX,FRAMES
 # 
-cd ${main}
-####
+cd ${frame}
+#####
+#01-FRAME
 #1.Arachni.
+wget https://github.com/Arachni/arachni/releases/download/v1.5.1/arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
+tar -xfvz arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 sleep 5
 echo '+-------------------------------------------------+'
 echo '| Arachni geladen und installiert                 |'
@@ -258,7 +261,11 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
-
+#####
+#02-workspace
+cd /root/${main}/${space}/
+#03-botnet
+#05
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
