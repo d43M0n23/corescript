@@ -23,7 +23,7 @@ bot="03-botnet"		# Botnetze
 sync="04-h4cK3D"		# h4cK3R-stuff
 crack="05-cracker"		# crack-engines
 script="06-0wnsRipt"	# eigene Scripte
-wifi="07-wiF1"		# Wifi-Attacken
+wifi="07-wifi"		# Wifi-Attacken
 ##################
 clear
 #################
@@ -335,8 +335,94 @@ read TASTE
 #####
 #02-workspace
 cd /root/${main}/${space}/
+clear
+echo '+-------------------------------------------------+'
+echo '| Own-Source - Kali CDs & Builds                  |'
+echo '+-------------------------------------------------+'
+echo '| 1.Kali-Iso.Build.                               |'
+echo '| 2.Kali-Nethunter. (Mobile OS).                  |'
+echo '| 3.Katana-Framework.                             |'
+echo '| 4.all.                                          |'
+echo '+-------------------------------------------------+'
+read -p "Download Sources from Git to Build (y/n)? " ownbuild
+##
+## Schleife
+##
+if [ $ownbuild = y ]; then
+        apt-get update && apt-get upgrade -y
+        apt-get dist-upgrade -y
+        apt autoremove -y
+        apt-get clean
+        apt-get install git live-build cdebootstrap devscripts -y
+        git clone git://git.kali.org/live-build-config.git
+	apt-get source debian-installer
+	git clone https://github.com/offensive-security/kali-nethunter.git
+	https://github.com/offensive-security/kali-arm-build-scripts.git
+	apt-get install gcc-arm-none-eabi
+	dpkg --add-architecture i386
+	apt-get install -y git-core gnupg flex bison gperf libesd0-dev build-essential zip curl libncurses5-dev zlib1g-dev libncurses5-dev gcc-multilib g++-multilib parted kpartx debootstrap pixz qemu-user-static abootimg cgpt vboot-kernel-utils vboot-utils bc lzma lzop xz-utils automake autoconf m4 dosfstools rsync u-boot-tools schedtool git e2fsprogs device-tree-compiler ccache dos2unix debootstrap libgmp3-dev:i386 libgmp3-dev
+fi
+cd ..
 #03-botnet
-#05
+cd /root/${main}/${bot}/
+clear
+echo '+-------------------------------------------------+'
+echo '| Botnet-Install                                  |'
+echo '+-------------------------------------------------+'
+echo '| 1.Ufonet.                                       |'
+echo '| 2.Xerxes.                                       |'
+echo '| 3.all.                                          |'
+echo '+-------------------------------------------------+'
+read -p "Download Botnet (y/n)? " ownbuild
+##
+## Schleife
+##
+if [ $botnet = y ]; then
+        echo 'Botnet comming soon'
+fi
+cd ..
+
+#05 Cracker
+cd /root/${main}/${crack}/
+clear
+echo '+-------------------------------------------------+'
+echo '| Crack-Engines                  |'
+echo '+-------------------------------------------------+'
+echo '| 1.brut3k1t.                                     |'
+echo '| 2.dagon.                                        |'
+echo '| 3.PyBozoCrack.                                  |'
+echo '| 4.all.                                          |'
+echo '+-------------------------------------------------+'
+read -p "Download Sources from Git to Build (y/n)? " owncrack
+##
+## Schleife
+##
+if [ $owncrack = y ]; then
+        echo 'Cracker comming soon'
+fi
+cd ..
+#07 WIFI
+cd /root/${main}/${wifi}/
+clear
+echo '+-------------------------------------------------+'
+echo '| Wifi-Attacker                                   |'
+echo '+-------------------------------------------------+'
+echo '| 1.Bully.                                        |'
+echo '| 2.Fluxion.                                      |'
+echo '| 3.Netattack2.                                   |'
+echo '| 3.Wifiphisher.                                  |'
+echo '| 3.Wifi-Pumpkin.                                 |'
+echo '| 4.all.                                          |'
+echo '+-------------------------------------------------+'
+read -p "Download Wifi Attack Tools (y/n)? " wifiattack
+##
+## Schleife
+##
+if [ $wifiattack = y ]; then
+        echo 'comming soon'
+fi
+cd ..
+
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
