@@ -139,6 +139,9 @@ cd ${frame}
 #####
 #01-FRAME
 #1.Arachni.
+
+if [ ! -d arachni-1.5.1-0.5.12 ]; then
+
 wget https://github.com/Arachni/arachni/releases/download/v1.5.1/arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 tar xfz arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
 rm arachni-1.5.1-0.5.12-linux-x86_64.tar.gz
@@ -149,8 +152,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
-
+fi
 #2.Getsploit.
+
+if [ ! -d getsploit ]; then
 git clone https://github.com/vulnersCom/getsploit.git
 cd getsploit
 python getsploit.py
@@ -162,8 +167,11 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #3.Katana-Framework.
+
+if [ ! -d KatanaFramework ]; then
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
 sleep 3
 echo '+-------------------------------------------------+'
@@ -172,8 +180,11 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #4.MITMf.
+
+if [ ! -d MITMf ]; then
 apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file -y
 git clone https://github.com/byt3bl33d3r/MITMf
 cd MITMf
@@ -186,8 +197,11 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #5.Pybelt.
+
+if [ ! -d pybelt ]; then
 git clone https://github.com/ekultek/pybelt.git
 cd pybelt
 pip install -r requirements.txt
@@ -199,8 +213,11 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #6.Scanner-Inurl-BR.
+
+if [ ! -d SCANNER-INURLBR ]; then
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
 cd SCANNER-INURLBR
 apt-get install php-curl -y
@@ -212,8 +229,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #7.Sn1per.
+if [ ! -d Sn1per ]; then
 git clone https://github.com/1N3/Sn1per.git
 cd Sn1per
 chmod +x install.sh
@@ -226,8 +245,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #8.TheFatRat.
+if [ ! -d TheFatRat ]; then
 git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
 chmod +x setup.sh && ./setup.sh
@@ -239,8 +260,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #9.Trity.
+if [ ! -d Trity ]; then
 git clone https://github.com/toxic-ig/Trity.git
 cd Trity
 python install.py
@@ -253,8 +276,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #10.Webpwn3r.
+if [ ! -d webpwn3r ]; then
 git clone https://github.com/zigoo0/webpwn3r.git
 sleep 3
 echo '+-------------------------------------------------+'
@@ -263,8 +288,10 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #11.WPSeku.
+if [ ! -d WPSeku ]; then
 git clone https://github.com/m4ll0k/WPSeku.git
 sleep 3
 echo '+-------------------------------------------------+'
@@ -273,10 +300,13 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #12.Xerosploit.
+if [ ! -d xerosploit ]; then
 git clone https://github.com/LionSec/xerosploit.git
 cd xerosploit && python install.py
+cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xerosploit geladen und installiert              |'
@@ -286,11 +316,13 @@ echo '+-------------------------------------------------+'
 read TASTE
 
 #13.Xsscrapy.
+if [ ! -d xsscrapy ]; then
 git clone https://github.com/DanMcInerney/xsscrapy.git
 cd xsscrapy
 pip install -r requirements.txt
 python xsscrapy.py -h
 cd ..
+fi
 
 sleep 3
 echo '+-------------------------------------------------+'
