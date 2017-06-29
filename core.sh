@@ -314,6 +314,7 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 
 #13.Xsscrapy.
 if [ ! -d xsscrapy ]; then
