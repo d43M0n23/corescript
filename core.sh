@@ -417,7 +417,7 @@ if [ $owncrack = y ]; then
 	cd ..
 	## Dagon Hash Manipulator
 	git clone https://github.com/ekultek/dagon.git
-	cd Dagon
+	cd dagon
 	pip install -r requirements.txt
 	cd ..
 	## PyBozoCrack
@@ -460,12 +460,59 @@ if [ $wifiattack = y ]; then
 	## Wifi-Phisher 
 	git clone https://github.com/sophron/wifiphisher.git
 	## WIFI Pumkin
-	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.gi
+	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.git
 	cd WiFi-Pumpkin
 	./installer.sh --install
 fi
 cd ..
+###
+# Update
+clear
+read -p "Create the d43M0n23-Deb.update script (y/n)? " daemonup
 
+if [ $daemonup = y ]; then
+cat << EOF > /root/dA3M0n23_update
+### Update Script ###
+clear
+apt-get update && apt-get upgrade -y
+### Dist upgrade
+apt-get dist-upgrade -y
+### Alles Clearn
+apt-get autoremove -y
+apt-get clean
+exit
+EOF
+chmod +x /root/dA3M0n23_update
+echo "Update-Script created!"
+fi
+# Sync
+read -p "Create the d43M0n23-Sync script (y/n)? " syncscript
+
+if [ $syncscript = y ]; then
+cat << EOF > /root/sync 
+rsync -arvz --exclude-from 'exclude-list.txt' -e 'ssh -p 2322' root@3xpl0it.com:/home/infinity/99-Hack/ /root/c0r3/04-h4cK3D/
+chown -R root:root /root/c0r3/04-h4cK3D/
+chmod -R 644 /root/c0r3/04-h4cK3D
+cp -R /root/c0r3/04-h4cK3D/walls/* /root/Bilder/
+echo 'synC all - tHx'
+EOF
+chmod +x /root/dA3M0n23_update
+echo "Sync-Script created!"
+fi
+# Resulution Virtualbox
+read -p "Create the d43M0n23-VBoxScreen script (y/n)? " vboxscreen
+
+if [ $vboxscreen = y ]; then
+cat << EOF > /root/r3s0luti0n_vm
+apt-get install -y linux-headers-$(uname -r)
+cd /media/cdrom/
+sh VBoxLinuxAdditions.run
+echo 'tHanks Reb00t'
+#reboot
+EOF
+chmod +x /root/r3s0luti0n_vm
+echo "Vbox-Script created!"
+fi
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
