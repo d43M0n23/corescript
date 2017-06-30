@@ -355,7 +355,7 @@ echo '| Own-Source - Kali CDs & Builds                  |'
 echo '+-------------------------------------------------+'
 echo '| 1.Kali-Iso.Build.                               |'
 echo '| 2.Kali-Nethunter. (Mobile OS).                  |'
-echo '| 3.Katana-Framework.                             |'
+echo '| 3.Kali-ARM-Build RPI3.                          |'
 echo '+-------------------------------------------------+'
 read -p "Download Sources from Git to Build (y/n)? " ownbuild
 ##
