@@ -537,6 +537,9 @@ cp -R /root/c0r3/04-h4cK3D/walls/* /root/Bilder/
 echo 'synC all - tHx'
 EOF
 chmod +x /root/sync
+cat << EOF > /root/exclude-list.txt
+vids/
+EOF
 echo "Sync-Script created!"
 fi
 # Resulution Virtualbox
@@ -552,6 +555,11 @@ echo 'tHanks Reb00t'
 EOF
 chmod +x /root/r3s0luti0n_vm
 echo "Vbox-Script created!"
+fi
+# Generate ssh key
+read -p "Create SSH Key.pub (y/n)? " sshkey
+if [ $sshkey = y ]; then
+	ssh-keygen -t rsa -b 4096
 fi
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
