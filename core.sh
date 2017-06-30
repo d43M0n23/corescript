@@ -443,6 +443,7 @@ if [ $owncrack = y ]; then
 	cd dagon
 	pip install -r requirements.txt
 	cd ..
+	fi
 	if [ ! -d PyBozoCrack ]; then
 	## PyBozoCrack
 	git clone https://github.com/ikkebr/PyBozoCrack.git
