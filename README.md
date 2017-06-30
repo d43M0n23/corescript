@@ -9,25 +9,13 @@ corescript is a framework written in bash for making penetration testing, based 
 
 # STRUCTUR
 
-<ul><li>01-frame
-	<ul><li>-arachni</li>
-	<li>-getsploit</li>
-	<li>-Katanaframework</li>
-	<li>-MITMf</li>
-	<li>-pybelt</li>
-	<li>-SCANNER-INURLBR</li>
-	<li>-Sniper</li>
-	<li>-TheFatRat</li>
-	<li>-Trity</li>
-	<li>-webpwn3r</li>
-	<li>-WPSeku</li>
-	<li>-xerosploit</li>
-	<li>-xsscrapy</li></ul></li>
-	<li>02-workspace
-	<ul><li>-0wn-Kali-build</li>
-	<li>-kali-nethunter</li>
-	<li>-0wn-kalirpi3</li></ul></li>
-</ul>
+<ul><li>01-frame: Arachni, getsploit, Katanaframework, MITMf, pybelt, SCANNER-INURLBR, Sniper, TheFatRat, Trity, webpwn3r, WPSeku, xerosploit, xsscrapy</li></ul>	
+<ul><li>02-workspace: 0wn-Kali-build, kali-nethunter, 0wn-kalirpi3</li></ul>
+<ul><li>03-botnet: Ufonet, Xerxes</li></ul>
+<ul><li>04-h4cK3d: (private sync dir in my case)</li></ul>
+<ul><li>05-cracker: Brut3K1t, Dagon, PyBozoCrack</li></ul>
+<ul><li>06-0wnsRipt: usefull scripts</li></ul>
+<ul><li>07-wifi: Bully, Fluxion, Netattack, Netattack2, Wifiphisher, Wifi-Pumpkin</li></ul>
 
 
 # SUPPORTED DISTRIBUTIONS
@@ -36,20 +24,19 @@ corescript is a framework written in bash for making penetration testing, based 
 |Kali Linux|4.4.0 | yes| yes | working   |
 |Debian(8)|4.4.0 | yes| yes | working   |
 |Parrot OS| |yes|yes|working   |
-|Wifislax| |yes|yes|working   |
-|OpenSuse| |yes|No|working   |
-|Arch Linux|4.8.6|yes|No|working   |
 |Raspbian|4.1.7 |yes|No|working   |
 |Ubuntu|14.04 |yes|No|working   |
 |Xbuntu|4.4.0 |yes|No|working  |
 
 # INSTALLATION
-Installation of corescript framework: is necesary install all [dependencies](https://github.com/d43M0n23/corescript/Requisites) for a good performance.
+Installation of corescript framework: is necesary install all [dependencies](https://github.com/d43M0n23/corescript/wiki/Requisites) for a good performance.
 <pre><i><n>git clone https://github.com/d43M0n23/corescript.git
 cd corescript
 sudo sh dependencies
-sudo python install
 </pre></i></n>
+# Run
+Edit the Config part
+<pre><i><n>./core.sh</pre></i></n>
 
 that's it ,) 3xP
 
