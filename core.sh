@@ -84,7 +84,9 @@ install without update!
 fi
 #exit
 #clear
-echo "Ordner werden angelegt falls nicht vorhanden"
+echo "
+Ordner werden angelegt falls nicht vorhanden
+"
 ##
 ##
 if [ ! -d /root/${main}/ ]; then
@@ -131,7 +133,9 @@ fi
 
 
 
-echo "fehlende Ordner wurden erstellt."
+echo "
+fehlende Ordner wurden erstellt.
+"
 ###
 # INSTALL SCRIPTS,AUX,FRAMES
 # 
@@ -342,7 +346,6 @@ echo '+-------------------------------------------------+'
 echo '| 1.Kali-Iso.Build.                               |'
 echo '| 2.Kali-Nethunter. (Mobile OS).                  |'
 echo '| 3.Katana-Framework.                             |'
-echo '| 4.all.                                          |'
 echo '+-------------------------------------------------+'
 read -p "Download Sources from Git to Build (y/n)? " ownbuild
 ##
@@ -353,10 +356,13 @@ if [ $ownbuild = y ]; then
         apt-get dist-upgrade -y
         apt autoremove -y
         apt-get clean
+	## KALI CD
         apt-get install git live-build cdebootstrap devscripts -y
         git clone git://git.kali.org/live-build-config.git
 	apt-get source debian-installer
+	## KALI Nethunter
 	git clone https://github.com/offensive-security/kali-nethunter.git
+	## KALI ARM Build like Raspberry
 	https://github.com/offensive-security/kali-arm-build-scripts.git
 	apt-get install gcc-arm-none-eabi
 	dpkg --add-architecture i386
@@ -371,36 +377,59 @@ echo '| Botnet-Install                                  |'
 echo '+-------------------------------------------------+'
 echo '| 1.Ufonet.                                       |'
 echo '| 2.Xerxes.                                       |'
-echo '| 3.all.                                          |'
 echo '+-------------------------------------------------+'
-read -p "Download Botnet (y/n)? " ownbuild
+read -p "Download Botnet (y/n)? " botnet
 ##
 ## Schleife
 ##
 if [ $botnet = y ]; then
-        echo 'Botnet comming soon'
+	## UFONET
+	git clone https://github.com/epsylon/ufonet
+	## Xerxes
+	git clone https://github.com/zanyarjamal/xerxes.git
+	cd xerxes
+	gcc xerxes.c -o xerxes
+	cd ..
+ echo 'Botnet installed - Job Done!'
 fi
+sleep 3
 cd ..
 
 #05 Cracker
 cd /root/${main}/${crack}/
 clear
 echo '+-------------------------------------------------+'
-echo '| Crack-Engines                  |'
+echo '| Crack-Engines                                   |'
 echo '+-------------------------------------------------+'
 echo '| 1.brut3k1t.                                     |'
 echo '| 2.dagon.                                        |'
 echo '| 3.PyBozoCrack.                                  |'
-echo '| 4.all.                                          |'
 echo '+-------------------------------------------------+'
 read -p "Download Sources from Git to Build (y/n)? " owncrack
 ##
 ## Schleife
 ##
 if [ $owncrack = y ]; then
-        echo 'Cracker comming soon'
+	## Brut3k1t
+	git clone https://github.com/ex0dus-0x/brut3k1t.git
+	cd brut3k1t
+	pip install -r requirements.txt
+	cd ..
+	## Dagon Hash Manipulator
+	git clone https://github.com/ekultek/dagon.git
+	cd Dagon
+	pip install -r requirements.txt
+	cd ..
+	## PyBozoCrack
+	git clone https://github.com/ikkebr/PyBozoCrack.git
+	cd PyBozoCrack
+	chmod +x pybozocrack.py
+	cd ..
+echo 'Cracker installed - Job Done!'
 fi
+sleep 3
 cd ..
+
 #07 WIFI
 cd /root/${main}/${wifi}/
 clear
@@ -412,14 +441,28 @@ echo '| 2.Fluxion.                                      |'
 echo '| 3.Netattack2.                                   |'
 echo '| 3.Wifiphisher.                                  |'
 echo '| 3.Wifi-Pumpkin.                                 |'
-echo '| 4.all.                                          |'
 echo '+-------------------------------------------------+'
 read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
 ## Schleife
 ##
 if [ $wifiattack = y ]; then
-        echo 'comming soon'
+	## Bully
+        git clone https://github.com/aanarchyy/bully.git
+	## Fluxon
+	apt-get -y install build-essential libpcap-dev libssl1.0-dev aircrack-ng pixiewps
+	git clone https://github.com/wi-fi-analyzer/fluxion.git
+	## NETATTACK 1
+	git clone https://github.com/chrizator/netattack.git
+	## NETATTACK 2
+	apt-get -y install python-nmap python-argparse python-scapy iw
+	git clone https://github.com/chrizator/netattack2.git
+	## Wifi-Phisher 
+	git clone https://github.com/sophron/wifiphisher.git
+	## WIFI Pumkin
+	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.gi
+	cd WiFi-Pumpkin
+	./installer.sh --install
 fi
 cd ..
 
