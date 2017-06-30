@@ -1,5 +1,5 @@
 #!/bin/bash
-# corescript v.1
+# corescript v.1.0
 # create folder and subs
 # include Frames,Aux;Attack
 #
@@ -7,9 +7,6 @@
 # ToDo:
 # generate ssh.pub key
 # add key do source 4 sync script
-# create folder
-# install scripts & frameworks
-#
 ##################
 
 ####################
@@ -28,13 +25,13 @@ wifi="07-wifi"		# Wifi-Attacken
 clear
 #################
 echo '+-------------------------------------------------+'
-echo '   ________                             _____   __ '
-echo '   ___  __ \_____ ____________ ____________  | / / '
-echo '   __  / / /  __ `/  _ \_  __ `__ \  __ \_   |/ /  '
-echo '   _  /_/ // /_/ //  __/  / / / / / /_/ /  /|  /   '
-echo '    _____/ \__,_/ \___//_/ /_/ /_/\____//_/ |_/    '
+echo '  ________                             _____   __  '
+echo '  ___  __ \_____ ____________ ____________  | / /  '
+echo '  __  / / /  __ `/  _ \_  __ `__ \  __ \_   |/ /   '
+echo '  _  /_/ // /_/ //  __/  / / / / / /_/ /  /|  /    '
+echo '   _____/ \__,_/ \___//_/ /_/ /_/\____//_/ |_/     '
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.05.19  |'
+echo '| to continue press Return       Date 2017.06.30  |'
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
@@ -45,7 +42,7 @@ echo '+-------------------------------------------------+'
 echo '|   This Script is subject to the GPL License!    |'
 echo '|   You can copy and change it!                   |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.05.19  |'
+echo '| to continue press Return       Date 2017.06.30  |'
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
@@ -65,6 +62,7 @@ echo '| 10.Webpwn3r.                                    |'
 echo '| 11.WPSeku.                                      |'
 echo '| 12.Xerosploit.                                  |'
 echo '| 13.Xsscrapy.                                    |'
+echo '| 14.Red-Hawk                                     |'
 echo '| 14.all.                                         |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
@@ -327,8 +325,6 @@ cd xsscrapy
 pip install -r requirements.txt
 python xsscrapy.py -h
 cd ..
-fi
-
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xss-Crapy geladen und installiert               |'
@@ -336,7 +332,21 @@ echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
+fi
 #####
+#14 Red-Hawk
+if [ ! -d RED_HAWK ]; then
+	git clone https://github.com/Tuhinshubhra/RED_HAWK.git
+	apt-get -y install php-curl php-xml
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| RED-HAWK geladen und installiert                |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
 #02-workspace
 cd /root/${main}/${space}/
 clear
@@ -357,16 +367,22 @@ if [ $ownbuild = y ]; then
         apt autoremove -y
         apt-get clean
 	## KALI CD
+	if [ ! -d live-build-config ]; then
         apt-get install git live-build cdebootstrap devscripts -y
         git clone git://git.kali.org/live-build-config.git
 	apt-get source debian-installer
+	fi
 	## KALI Nethunter
+	if [ ! -d kali-nethunter ]; then
 	git clone https://github.com/offensive-security/kali-nethunter.git
+	fi
 	## KALI ARM Build like Raspberry
-	https://github.com/offensive-security/kali-arm-build-scripts.git
+	if [ ! -d kali-arm-build-scripts ]; then
+	git clone https://github.com/offensive-security/kali-arm-build-scripts.git
 	apt-get install gcc-arm-none-eabi
 	dpkg --add-architecture i386
 	apt-get install -y git-core gnupg flex bison gperf libesd0-dev build-essential zip curl libncurses5-dev zlib1g-dev libncurses5-dev gcc-multilib g++-multilib parted kpartx debootstrap pixz qemu-user-static abootimg cgpt vboot-kernel-utils vboot-utils bc lzma lzop xz-utils automake autoconf m4 dosfstools rsync u-boot-tools schedtool git e2fsprogs device-tree-compiler ccache dos2unix debootstrap libgmp3-dev:i386 libgmp3-dev
+	fi
 fi
 cd ..
 #03-botnet
@@ -384,12 +400,16 @@ read -p "Download Botnet (y/n)? " botnet
 ##
 if [ $botnet = y ]; then
 	## UFONET
+	if [ ! -d ufonet ]; then
 	git clone https://github.com/epsylon/ufonet
+	fi
 	## Xerxes
+	if [ ! -d xerxes ]; then
 	git clone https://github.com/zanyarjamal/xerxes.git
 	cd xerxes
 	gcc xerxes.c -o xerxes
 	cd ..
+	fi
  echo 'Botnet installed - Job Done!'
 fi
 sleep 3
@@ -405,26 +425,31 @@ echo '| 1.brut3k1t.                                     |'
 echo '| 2.dagon.                                        |'
 echo '| 3.PyBozoCrack.                                  |'
 echo '+-------------------------------------------------+'
-read -p "Download Sources from Git to Build (y/n)? " owncrack
+read -p "Download Crack Engines (y/n)? " owncrack
 ##
 ## Schleife
 ##
 if [ $owncrack = y ]; then
 	## Brut3k1t
+	if [ ! -d brut3k1t ]; then
 	git clone https://github.com/ex0dus-0x/brut3k1t.git
 	cd brut3k1t
 	pip install -r requirements.txt
 	cd ..
+	fi
 	## Dagon Hash Manipulator
+	if [ ! -d dagon ]; then
 	git clone https://github.com/ekultek/dagon.git
 	cd dagon
 	pip install -r requirements.txt
 	cd ..
+	if [ ! -d PyBozoCrack ]; then
 	## PyBozoCrack
 	git clone https://github.com/ikkebr/PyBozoCrack.git
 	cd PyBozoCrack
 	chmod +x pybozocrack.py
 	cd ..
+	fi
 echo 'Cracker installed - Job Done!'
 fi
 sleep 3
@@ -448,21 +473,32 @@ read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
 if [ $wifiattack = y ]; then
 	## Bully
+	if [ ! -d bully ]; then
         git clone https://github.com/aanarchyy/bully.git
+	fi	
 	## Fluxon
+	if [ ! -d webpwn3r ]; then
 	apt-get -y install build-essential libpcap-dev libssl1.0-dev aircrack-ng pixiewps
 	git clone https://github.com/wi-fi-analyzer/fluxion.git
 	## NETATTACK 1
+	if [ ! -d netattack ]; then
 	git clone https://github.com/chrizator/netattack.git
+	fi
 	## NETATTACK 2
+	if [ ! -d netattack2 ]; then
 	apt-get -y install python-nmap python-argparse python-scapy iw
 	git clone https://github.com/chrizator/netattack2.git
-	## Wifi-Phisher 
+	fi
+	## Wifi-Phisher
+	if [ ! -d wifiphisher ]; then
 	git clone https://github.com/sophron/wifiphisher.git
+	fi
 	## WIFI Pumkin
+	if [ ! -d WiFi-Pumpkin ]; then
 	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.git
 	cd WiFi-Pumpkin
 	./installer.sh --install
+	fi
 fi
 cd ..
 ###
@@ -496,7 +532,7 @@ chmod -R 644 /root/c0r3/04-h4cK3D
 cp -R /root/c0r3/04-h4cK3D/walls/* /root/Bilder/
 echo 'synC all - tHx'
 EOF
-chmod +x /root/dA3M0n23_update
+chmod +x /root/sync
 echo "Sync-Script created!"
 fi
 # Resulution Virtualbox
