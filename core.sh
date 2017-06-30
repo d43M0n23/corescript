@@ -455,7 +455,8 @@ echo 'Cracker installed - Job Done!'
 fi
 sleep 3
 cd ..
-
+#06 0wnsRipt
+#comming soon.
 #07 WIFI
 cd /root/${main}/${wifi}/
 clear
@@ -464,9 +465,10 @@ echo '| Wifi-Attacker                                   |'
 echo '+-------------------------------------------------+'
 echo '| 1.Bully.                                        |'
 echo '| 2.Fluxion.                                      |'
-echo '| 3.Netattack2.                                   |'
-echo '| 3.Wifiphisher.                                  |'
-echo '| 3.Wifi-Pumpkin.                                 |'
+echo '| 3.Netattack.                                    |'
+echo '| 4.Netattack2.                                   |'
+echo '| 5.Wifiphisher.                                  |'
+echo '| 6.Wifi-Pumpkin.                                 |'
 echo '+-------------------------------------------------+'
 read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
@@ -476,11 +478,12 @@ if [ $wifiattack = y ]; then
 	## Bully
 	if [ ! -d bully ]; then
         git clone https://github.com/aanarchyy/bully.git
-	fi	
+	fi
 	## Fluxon
-	if [ ! -d webpwn3r ]; then
+	if [ ! -d fluxon ]; then
 	apt-get -y install build-essential libpcap-dev libssl1.0-dev aircrack-ng pixiewps
 	git clone https://github.com/wi-fi-analyzer/fluxion.git
+	fi
 	## NETATTACK 1
 	if [ ! -d netattack ]; then
 	git clone https://github.com/chrizator/netattack.git
