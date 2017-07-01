@@ -534,6 +534,7 @@ rsync -arvz --exclude-from 'exclude-list.txt' -e 'ssh -p 2322' root@3xpl0it.com:
 chown -R root:root /root/c0r3/04-h4cK3D/
 chmod -R 644 /root/c0r3/04-h4cK3D
 cp -R /root/c0r3/04-h4cK3D/walls/* /root/Bilder/
+cp /root/c0r3/04-h4cK3D/.bash_aliases /root/
 echo 'synC all - tHx'
 EOF
 chmod +x /root/sync
@@ -557,9 +558,11 @@ chmod +x /root/r3s0luti0n_vm
 echo "Vbox-Script created!"
 fi
 # Generate ssh key
+if [ ! -f /root/.ssh/id_rsa.pub ]; then
 read -p "Create SSH Key.pub (y/n)? " sshkey
 if [ $sshkey = y ]; then
 	ssh-keygen -t rsa -b 4096
+fi
 fi
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
