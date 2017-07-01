@@ -21,12 +21,11 @@ corescript is a framework written in bash for making penetration testing, based 
 # SUPPORTED DISTRIBUTIONS
 |Distribution | Version Check | supported | dependencies already installed |status |
 ----------|-------|------|------|-------|
-|Kali Linux|4.4.0 | yes| yes | working   |
-|Debian(8)|4.4.0 | yes| yes | working   |
-|Parrot OS| |yes|yes|working   |
-|Raspbian|4.1.7 |yes|No|working   |
-|Ubuntu|14.04 |yes|No|working   |
-|Xbuntu|4.4.0 |yes|No|working  |
+|Kali Linux|1.0 | yes| yes | working   |
+|Debian(8)|1.0 | yes| yes | working   |
+|Raspbian|1.0 |yes|No|working   |
+|Ubuntu|1.0 |yes|No|working   |
+|Xbuntu|1.0 |yes|No|working  |
 
 # INSTALLATION
 Installation of corescript framework: is necesary install all [dependencies](https://github.com/d43M0n23/corescript/wiki/Requisites) for a good performance.
@@ -39,4 +38,3 @@ Edit the Config part
 <pre><i><n>./core.sh</pre></i></n>
 
 that's it ,) 3xP
-
