@@ -19,7 +19,7 @@ space="02-workspace"	# Arbeitsplatz
 bot="03-botnet"		# Botnetze
 sync="04-h4cK3D"		# h4cK3R-stuff
 crack="05-cracker"		# crack-engines
-script="06-0wnsRipts"	# eigene Scripte
+script="06-0wnscRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
 ##################
 clear
