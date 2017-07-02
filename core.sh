@@ -14,12 +14,12 @@
 ####################
 
 main="c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
-frame="01-frame"		# framework ordner für diverse Scripte /Scanner Aux etc.
+frame="01-frames"		# framework ordner für diverse Scripte /Scanner Aux etc.
 space="02-workspace"	# Arbeitsplatz
 bot="03-botnet"		# Botnetze
 sync="04-h4cK3D"		# h4cK3R-stuff
 crack="05-cracker"		# crack-engines
-script="06-0wnsRipt"	# eigene Scripte
+script="06-0wnsRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
 ##################
 clear
