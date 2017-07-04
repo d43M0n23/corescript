@@ -66,7 +66,8 @@ echo '| 11.WPSeku.                                      |'
 echo '| 12.Xerosploit.                                  |'
 echo '| 13.Xsscrapy.                                    |'
 echo '| 14.Red-Hawk                                     |'
-echo '| 14.all.                                         |'
+echo '| 15.Veil-Framework.                              |'
+echo '| 16.Zirikatu-Payload.                            |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -349,6 +350,36 @@ echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
 fi
+
+#15 Veil-Framework
+if [ ! -d Veil ]; then
+        git clone https://github.com/Veil-Framework/Veil.git
+	cd Veil/
+	cd setup
+	./setup.sh -c
+	cd ..
+	cd ..
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| Veil-Framework geladen und installiert          |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
+#16 Zirikatu
+if [ ! -d zirikatu ]; then
+        git clone https://github.com/pasahitz/zirikatu.git
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| Zirikatu-Payload geladen und installiert        |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
 
 #02-workspace
 cd /root/${main}/${space}/
