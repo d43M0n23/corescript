@@ -572,7 +572,6 @@ read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
 
 if [ $grubscreen = y ]; then
 cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
-EOF
 echo "Grub-Screen created!"
 fi
 
