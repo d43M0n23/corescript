@@ -7,6 +7,9 @@
 # ToDo:
 # generate ssh.pub key
 # add key do source 4 sync script
+# rubygem
+# python3
+# if debian or kali
 ##################
 
 ####################
@@ -543,7 +546,7 @@ vids/
 EOF
 echo "Sync-Script created!"
 fi
-# Resulution Virtualbox
+# Resolution Virtualbox
 read -p "Create the d43M0n23-VBoxScreen script (y/n)? " vboxscreen
 
 if [ $vboxscreen = y ]; then
@@ -564,6 +567,15 @@ if [ $sshkey = y ]; then
 	ssh-keygen -t rsa -b 4096
 fi
 fi
+# Grub boot logo
+read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
+
+if [ $grubscreen = y ]; then
+cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
+EOF
+echo "Grub-Screen created!"
+fi
+
 #Final MSG
 echo "a11 d43M0n23 s0urc3s geladen - cyA"
 exit
