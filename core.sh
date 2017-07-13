@@ -529,7 +529,10 @@ if [ $wifiattack = y ]; then
 	fi
 	## Wifi-Phisher
 	if [ ! -d wifiphisher ]; then
-	git clone https://github.com/sophron/wifiphisher.git
+	git clone https://github.com/wifiphisher/wifiphisher.git
+	cd wifiphisher
+	sudo python setup.py install
+	cd ..
 	fi
 	## WIFI Pumkin
 	if [ ! -d WiFi-Pumpkin ]; then
