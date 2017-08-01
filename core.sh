@@ -548,7 +548,7 @@ clear
 read -p "Create the d43M0n23-Deb.update script (y/n)? " daemonup
 
 if [ $daemonup = y ]; then
-cat << EOF > /root/dA3M0n23_update
+cat << EOF > /root/d43M0n23_update
 ### Update Script ###
 clear
 apt-get update && apt-get upgrade -y
@@ -559,7 +559,7 @@ apt-get autoremove -y
 apt-get clean
 exit
 EOF
-chmod +x /root/dA3M0n23_update
+chmod +x /root/d43M0n23_update
 echo "Update-Script created!"
 fi
 # Sync
