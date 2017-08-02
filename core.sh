@@ -458,6 +458,7 @@ echo '+-------------------------------------------------+'
 echo '| 1.brut3k1t.                                     |'
 echo '| 2.dagon.                                        |'
 echo '| 3.PyBozoCrack.                                  |'
+echo '| 4.Hash Buster.                                  |'
 echo '+-------------------------------------------------+'
 read -p "Download Crack Engines (y/n)? " owncrack
 ##
@@ -485,6 +486,13 @@ if [ $owncrack = y ]; then
 	chmod +x pybozocrack.py
 	cd ..
 	fi
+        if [ ! -d Hash-Buster ]; then
+        ## Hash-Buster
+        git clone https://github.com/UltimateHackers/Hash-Buster.git
+        #cd PyBozoCrack
+        #chmod +x pybozocrack.py
+        #cd ..
+        fi
 echo 'Cracker installed - Job Done!'
 fi
 sleep 3
