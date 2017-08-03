@@ -34,7 +34,7 @@ echo '  __  / / /  __ `/  _ \_  __ `__ \  __ \_   |/ /   '
 echo '  _  /_/ // /_/ //  __/  / / / / / /_/ /  /|  /    '
 echo '   _____/ \__,_/ \___//_/ /_/ /_/\____//_/ |_/     '
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.06.30  |'
+echo '| to continue press Return       Date 2017.07.03  |'
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
@@ -68,6 +68,7 @@ echo '| 13.Xsscrapy.                                    |'
 echo '| 14.Red-Hawk                                     |'
 echo '| 15.Veil-Framework.                              |'
 echo '| 16.Zirikatu-Payload.                            |'
+echo '| 17.Morpheus MITM.                               |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -374,6 +375,21 @@ if [ ! -d zirikatu ]; then
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Zirikatu-Payload geladen und installiert        |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
+#17 Morpheus
+if [ ! -d morpheus ]; then
+	git clone https://github.com/r00t-3xp10it/morpheus.git
+	cd morpheus
+	chmod +x morpheus.sh
+	cd ..
+slepp 3
+echo '+-------------------------------------------------+'
+echo '| Morpheus MITM geladen und installiert           |'
 echo '+-------------------------------------------------+'
 echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
