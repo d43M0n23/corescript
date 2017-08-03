@@ -39,7 +39,7 @@ echo '+-------------------------------------------------+'
 read -e TASTE
 clear
 echo '+-------------------------------------------------+'
-echo '|   (c)opyright 2017 by                           |'
+echo '|   Version 1.0 (c)opyright 2017 by               |'
 echo '|   DaemoN d43M0n23@3xpl0it.com                   |'
 echo '+-------------------------------------------------+'
 echo '|   This Script is subject to the GPL License!    |'
@@ -527,6 +527,9 @@ echo '| 3.Netattack.                                    |'
 echo '| 4.Netattack2.                                   |'
 echo '| 5.Wifiphisher.                                  |'
 echo '| 6.Wifi-Pumpkin.                                 |'
+echo '| 7.Ghost-Phisher.                                |'
+echo '| 8.MDK3 AP.                                      |'
+echo '| 9.Airgeddon.                                    |'
 echo '+-------------------------------------------------+'
 read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
@@ -564,6 +567,30 @@ if [ $wifiattack = y ]; then
 	cd WiFi-Pumpkin
 	./installer.sh --install
 	fi
+	#Ghost-Phisher
+	if [ ! -d ghost-phisher ]; then
+	git clone https://github.com/savio-code/ghost-phisher.git
+	sleep 1
+	cd ghost-phisher/Ghost-Phisher/
+	chmod +x ghost.py
+	cd ../..
+	fi
+	#MDK3 AP
+	if [ ! -d mdk3-master ]; then
+	git clone https://github.com/wi-fi-analyzer/mdk3-master.git
+	cd mdk3-master
+	make
+	make install
+	cd ..
+	fi
+	#Airgeddon
+	if [ ! -d airgeddon ]; then
+	git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
+	cd airgeddon
+	chmod +x airgeddon.sh
+	cd ..
+	fi
+
 fi
 cd ..
 ###
