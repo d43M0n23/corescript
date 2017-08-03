@@ -40,7 +40,7 @@ read -e TASTE
 clear
 echo '+-------------------------------------------------+'
 echo '|   (c)opyright 2017 by                           |'
-echo '|   DaemoN daemon@coremedia.la                    |'
+echo '|   DaemoN d43M0n23@3xpl0it.com                   |'
 echo '+-------------------------------------------------+'
 echo '|   This Script is subject to the GPL License!    |'
 echo '|   You can copy and change it!                   |'
