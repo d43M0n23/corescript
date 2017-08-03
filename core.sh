@@ -45,7 +45,7 @@ echo '+-------------------------------------------------+'
 echo '|   This Script is subject to the GPL License!    |'
 echo '|   You can copy and change it!                   |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.06.30  |'
+echo '| to continue press Return       Date 2017.07.03  |'
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
