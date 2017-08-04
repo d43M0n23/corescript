@@ -10,21 +10,50 @@
 # rubygem
 # python3
 # if debian or kali
+# if raspberry - Desktop einrichten
+# /usr/share/images/desktop-base
+# loginscreen & avatar setting
 ##################
-
+version=1.0
+vdate=04.07.2017
 ####################
 # CONFIG THIS PART #
 ####################
 
 main="c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
-frame="01-frames"		# framework ordner für diverse Scripte /Scanner Aux etc.
+frame="01-frames"	# framework ordner für diverse Scripte /Scanner Aux etc.
 space="02-workspace"	# Arbeitsplatz
 bot="03-botnet"		# Botnetze
-sync="04-h4cK3D"		# h4cK3R-stuff
-crack="05-cracker"		# crack-engines
+sync="04-h4cK3D"	# h4cK3R-stuff
+crack="05-cracker"	# crack-engines
 script="06-0wnscRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
 ##################
+# Bash sTyl3!
+clear='\033[0m'                 #alle Attribute zurücksetzen
+red='\e[31m'
+bold='\033[1m'                  #Fettschrift
+underline='\033[4m'             #Unterstreichen
+blinken='\033[5m'               #Blinken
+invers='\033[7m'                #inverse Darstellung
+black='\033[30m'                #Schriftfarbe schwarz
+red='\033[31m'                  #Schriftfarbe rot
+green='\033[32m'                #Schriftfarbe grün
+yell='\033[33m'                 #Schriftfarbe gelb
+blue='\033[34m'                 #Schriftfarbe blau
+mag='\033[35m'                  #Schriftfarbe magenta
+turk='\033[36m'                 #Schriftfarbe türkis
+white='\033[37m'                #Schriftfarbe weiß
+## B4ckgr0unD
+#bgblack='\033[40m'              #Hintergrund schwarz
+#bgred='\033[41m'                #Hintergrund rot
+#bggreen='\033[42m'              #Hintergrund grün
+#bgyell='\033[43m'               #Hintergrund gelb
+#bgblue='\033[44m'               #Hintergrund blau
+#bgmag='\033[45m'                #Hintergrund magenta
+#bgturk='\033[46m'               #Hintergrund türkis
+#bgwhite='\033[47m'              #Hintergrund weiß
+#################
 clear
 #################
 echo '+-------------------------------------------------+'
@@ -34,18 +63,18 @@ echo '  __  / / /  __ `/  _ \_  __ `__ \  __ \_   |/ /   '
 echo '  _  /_/ // /_/ //  __/  / / / / / /_/ /  /|  /    '
 echo '   _____/ \__,_/ \___//_/ /_/ /_/\____//_/ |_/     '
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.07.03  |'
+echo "| to continue press Return       Date: ${vdate} |"
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
 echo '+-------------------------------------------------+'
-echo '|   Version 1.0 (c)opyright 2017 by               |'
+echo "|   Version ${version} (c)opyright 2017 by               |"
 echo '|   DaemoN d43M0n23@3xpl0it.com                   |'
 echo '+-------------------------------------------------+'
 echo '|   This Script is subject to the GPL License!    |'
 echo '|   You can copy and change it!                   |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return       Date 2017.07.03  |'
+echo "| to continue press Return       Date: ${vdate} |"
 echo '+-------------------------------------------------+'
 read -e TASTE
 clear
