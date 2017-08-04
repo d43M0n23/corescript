@@ -732,7 +732,7 @@ echo "Grub-Screen created!"
 fi
 
 # Github Core Script
-read -p "Create the d43M0n23-Github-Script (y/n)? " gitscritp
+read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
 
 if [ $gitscript = y ]; then
 cat << EOF > /root/corescript
@@ -741,11 +741,10 @@ if [ -d corescript ]; then
 rm -r corescript
 fi
 git clone https://github.com/d43M0n23/corescript.git
-echo 'tHanks corescript initialized ;)'
+echo 'Corescript Updated'
 EOF
 chmod +x /root/corescript
-
-echo "Grub-Screen created!"
+echo 'tHanks corescript initialized ;)'
 fi
 
 #Final MSG
