@@ -14,6 +14,7 @@
 # /usr/share/images/desktop-base
 # loginscreen & avatar setting
 # Nessus,OpenVas
+# https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=1.0
 vdate=04.07.2017
@@ -84,22 +85,23 @@ echo '+-------------------------------------------------+'
 echo '| Own-Scripts, Aux & Attacker-Frames              |'
 echo '+-------------------------------------------------+'
 echo '| 1.Arachni.                                      |'
-echo '| 2.Getsploit.                                    |'
-echo '| 3.Katana-Framework.                             |'
-echo '| 4.MITMf.                                        |'
-echo '| 5.Pybelt.                                       |'
-echo '| 6.Scanner-Inurl-BR.                             |'
-echo '| 7.Sn1per.                                       |'
-echo '| 8.TheFatRat.                                    |'
-echo '| 9.Trity.                                        |'
-echo '| 10.Webpwn3r.                                    |'
-echo '| 11.WPSeku.                                      |'
-echo '| 12.Xerosploit.                                  |'
-echo '| 13.Xsscrapy.                                    |'
-echo '| 14.Red-Hawk                                     |'
-echo '| 15.Veil-Framework.                              |'
-echo '| 16.Zirikatu-Payload.                            |'
-echo '| 17.Morpheus MITM.                               |'
+echo '| 2.Nessus.                                       |'
+echo '| 3.Getsploit.                                    |'
+echo '| 4.Katana-Framework.                             |'
+echo '| 5.MITMf.                                        |'
+echo '| 6.Pybelt.                                       |'
+echo '| 7.Scanner-Inurl-BR.                             |'
+echo '| 8.Sn1per.                                       |'
+echo '| 9.TheFatRat.                                    |'
+echo '| 10.Trity.                                       |'
+echo '| 11.Webpwn3r.                                    |'
+echo '| 12.WPSeku.                                      |'
+echo '| 13.Xerosploit.                                  |'
+echo '| 14.Xsscrapy.                                    |'
+echo '| 15.Red-Hawk                                     |'
+echo '| 16.Veil-Framework.                              |'
+echo '| 17.Zirikatu-Payload.                            |'
+echo '| 18.Morpheus MITM.                               |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -177,7 +179,7 @@ fehlende Ordner wurden erstellt.
 "
 ###
 # INSTALL SCRIPTS,AUX,FRAMES
-# 
+#
 cd ${frame}
 #####
 #01-FRAME
@@ -196,7 +198,8 @@ echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
 fi
-#2.Getsploit.
+#2.Nessus comming soon
+#3.Getsploit.
 
 if [ ! -d getsploit ]; then
 git clone https://github.com/vulnersCom/getsploit.git
@@ -212,7 +215,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#3.Katana-Framework.
+#4.Katana-Framework.
 
 if [ ! -d KatanaFramework ]; then
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
@@ -225,7 +228,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#4.MITMf.
+#5.MITMf.
 
 if [ ! -d MITMf ]; then
 apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file -y
@@ -242,7 +245,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#5.Pybelt.
+#6.Pybelt.
 
 if [ ! -d pybelt ]; then
 git clone https://github.com/ekultek/pybelt.git
@@ -258,7 +261,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#6.Scanner-Inurl-BR.
+#7.Scanner-Inurl-BR.
 
 if [ ! -d SCANNER-INURLBR ]; then
 git clone 'https://github.com/googleinurl/SCANNER-INURLBR.git'
@@ -274,7 +277,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#7.Sn1per.
+#8.Sn1per.
 if [ ! -d Sn1per ]; then
 git clone https://github.com/1N3/Sn1per.git
 cd Sn1per
@@ -290,7 +293,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#8.TheFatRat.
+#9.TheFatRat.
 if [ ! -d TheFatRat ]; then
 git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
@@ -305,7 +308,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#9.Trity.
+#10.Trity.
 if [ ! -d Trity ]; then
 git clone https://github.com/toxic-ig/Trity.git
 cd Trity
@@ -321,7 +324,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#10.Webpwn3r.
+#11.Webpwn3r.
 if [ ! -d webpwn3r ]; then
 git clone https://github.com/zigoo0/webpwn3r.git
 sleep 3
@@ -333,7 +336,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#11.WPSeku.
+#12.WPSeku.
 if [ ! -d WPSeku ]; then
 git clone https://github.com/m4ll0k/WPSeku.git
 sleep 3
@@ -345,7 +348,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#12.Xerosploit.
+#13.Xerosploit.
 if [ ! -d xerosploit ]; then
 git clone https://github.com/LionSec/xerosploit.git
 cd xerosploit && python install.py
@@ -359,7 +362,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#13.Xsscrapy.
+#14.Xsscrapy.
 if [ ! -d xsscrapy ]; then
 git clone https://github.com/DanMcInerney/xsscrapy.git
 cd xsscrapy
@@ -374,8 +377,8 @@ echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
 fi
-#####
-#14 Red-Hawk
+
+#15.Red-Hawk.
 if [ ! -d RED_HAWK ]; then
 	git clone https://github.com/Tuhinshubhra/RED_HAWK.git
 	apt-get -y install php-curl php-xml
@@ -388,7 +391,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#15 Veil-Framework
+#16.Veil-Framework.
 if [ ! -d Veil ]; then
         git clone https://github.com/Veil-Framework/Veil.git
 	cd Veil/
@@ -405,7 +408,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#16 Zirikatu
+#17.Zirikatu.
 if [ ! -d zirikatu ]; then
         git clone https://github.com/pasahitz/zirikatu.git
 sleep 3
@@ -417,7 +420,7 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
-#17 Morpheus
+#18.Morpheus.
 if [ ! -d morpheus ]; then
 	git clone https://github.com/r00t-3xp10it/morpheus.git
 	cd morpheus
@@ -684,7 +687,12 @@ cat << EOF > /root/sync
 rsync -arvz --exclude-from 'exclude-list.txt' -e 'ssh -p 2322' root@3xpl0it.com:/home/infinity/99-Hack/ /root/c0r3/04-h4cK3D/
 chown -R root:root /root/c0r3/04-h4cK3D/
 chmod -R 644 /root/c0r3/04-h4cK3D
+if [ -d /root/Bilder ]; then
 cp -R /root/c0r3/04-h4cK3D/walls/* /root/Bilder/
+fi
+if [ -d /root/Pictures ];then
+cp -R /root/c0r3/04-h4cK3D/walls/* /root/Pictures/
+fi
 cp /root/c0r3/04-h4cK3D/.bash_aliases /root/
 echo 'synC all - tHx'
 EOF
@@ -720,6 +728,22 @@ read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
 
 if [ $grubscreen = y ]; then
 cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
+echo "Grub-Screen created!"
+fi
+
+# Github Core Script
+read -p "Create the d43M0n23-Github-Script (y/n)? " gitscritp
+
+if [ $gitscript = y ]; then
+cat << EOF > /root/corescript
+cd /root/Downloads
+if [ -d corescript ]; then
+rm -r corescript
+git clone https://github.com/d43M0n23/corescript.git
+echo 'tHanks corescript initialized ;)'
+EOF
+chmod +x /root/corescript
+
 echo "Grub-Screen created!"
 fi
 
