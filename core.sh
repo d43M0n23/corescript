@@ -539,20 +539,32 @@ if [ $wifiattack = y ]; then
 	## Bully
 	if [ ! -d bully ]; then
         git clone https://github.com/aanarchyy/bully.git
+	echo '+-------------------------------------------------+'
+	echo '| Bully Installed                                 |'
+	echo '+-------------------------------------------------+'
 	fi
 	## Fluxon
 	if [ ! -d fluxon ]; then
 	apt-get -y install build-essential libpcap-dev libssl1.0-dev aircrack-ng pixiewps
 	git clone https://github.com/wi-fi-analyzer/fluxion.git
+        echo '+-------------------------------------------------+'
+        echo '| Fluxon Installed                                |'
+        echo '+-------------------------------------------------+'
 	fi
 	## NETATTACK 1
 	if [ ! -d netattack ]; then
 	git clone https://github.com/chrizator/netattack.git
+        echo '+-------------------------------------------------+'
+        echo '| Netattack v1  Installed                         |'
+        echo '+-------------------------------------------------+'
 	fi
 	## NETATTACK 2
 	if [ ! -d netattack2 ]; then
 	apt-get -y install python-nmap python-argparse python-scapy iw
 	git clone https://github.com/chrizator/netattack2.git
+        echo '+-------------------------------------------------+'
+        echo '| Netattack v2 Installed                          |'
+        echo '+-------------------------------------------------+'
 	fi
 	## Wifi-Phisher
 	if [ ! -d wifiphisher ]; then
@@ -560,12 +572,18 @@ if [ $wifiattack = y ]; then
 	cd wifiphisher
 	sudo python setup.py install
 	cd ..
+        echo '+-------------------------------------------------+'
+        echo '| Wifi-Phisher Installed                          |'
+        echo '+-------------------------------------------------+'
 	fi
 	## WIFI Pumkin
 	if [ ! -d WiFi-Pumpkin ]; then
 	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.git
 	cd WiFi-Pumpkin
 	./installer.sh --install
+        echo '+-------------------------------------------------+'
+        echo '| Wifi Pumpkin Installed                          |'
+        echo '+-------------------------------------------------+'
 	fi
 	#Ghost-Phisher
 	if [ ! -d ghost-phisher ]; then
@@ -574,6 +592,9 @@ if [ $wifiattack = y ]; then
 	cd ghost-phisher/Ghost-Phisher/
 	chmod +x ghost.py
 	cd ../..
+        echo '+-------------------------------------------------+'
+        echo '| Ghost-Phisher Installed                         |'
+        echo '+-------------------------------------------------+'
 	fi
 	#MDK3 AP
 	if [ ! -d mdk3-master ]; then
@@ -582,6 +603,9 @@ if [ $wifiattack = y ]; then
 	make
 	make install
 	cd ..
+        echo '+-------------------------------------------------+'
+        echo '| MDK3 AP Installed                               |'
+        echo '+-------------------------------------------------+'
 	fi
 	#Airgeddon
 	if [ ! -d airgeddon ]; then
@@ -589,6 +613,9 @@ if [ $wifiattack = y ]; then
 	cd airgeddon
 	chmod +x airgeddon.sh
 	cd ..
+        echo '+-------------------------------------------------+'
+        echo '| Airgeddon Installed                             |'
+        echo '+-------------------------------------------------+'
 	fi
 
 fi
