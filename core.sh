@@ -739,6 +739,7 @@ cat << EOF > /root/corescript
 cd /root/Downloads
 if [ -d corescript ]; then
 rm -r corescript
+fi
 git clone https://github.com/d43M0n23/corescript.git
 echo 'tHanks corescript initialized ;)'
 EOF
