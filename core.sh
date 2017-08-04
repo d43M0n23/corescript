@@ -29,6 +29,7 @@ sync="04-h4cK3D"	# h4cK3R-stuff
 crack="05-cracker"	# crack-engines
 script="06-0wnscRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
+lab="08-lab"
 ##################
 # Bash sTyl3!
 clear='\033[0m'                 #alle Attribute zurücksetzen
@@ -162,6 +163,11 @@ fi
 if [ ! -d ${wifi} ]; then
         mkdir ${wifi}
         echo "${wifi} wurde angelegt"
+fi
+
+if [ ! -d ${lab} ]; then
+        mkdir ${lab}
+        echo "${lab} wurde angelegt"
 fi
 
 
