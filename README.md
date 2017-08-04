@@ -37,4 +37,6 @@ sudo sh dependencies
 Edit the Config part
 <pre><i><n>./core.sh</pre></i></n>
 
-that's it ,) 3xP
+that's it ,)
+Have fun & n1c3 d4Y. 3xpl0it.com
+
