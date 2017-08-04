@@ -13,6 +13,7 @@
 # if raspberry - Desktop einrichten
 # /usr/share/images/desktop-base
 # loginscreen & avatar setting
+# Nessus,OpenVas
 ##################
 version=1.0
 vdate=04.07.2017
