@@ -102,6 +102,8 @@ echo '| 15.Red-Hawk                                     |'
 echo '| 16.Veil-Framework.                              |'
 echo '| 17.Zirikatu-Payload.                            |'
 echo '| 18.Morpheus MITM.                               |'
+echo '| 19.AngryFuzzer.                                 |'
+echo '| 20.Debinject.                                   |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -435,6 +437,30 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
+#19.AngryFuzzer.
+if [ ! -d angryFuzzer ]; then
+        git clone https://github.com/ihebski/angryFuzzer.git
+slepp 3
+echo '+-------------------------------------------------+'
+echo '| AngryFuzzer geladen und installiert             |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
+
+#20.Debinject.
+if [ ! -d Debinject ]; then
+        git clone https://github.com/UndeadSec/Debinject.git
+slepp 3
+echo '+-------------------------------------------------+'
+echo '| Debinject geladen und installiert               |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
 
 #02-workspace
 cd /root/${main}/${space}/
@@ -735,6 +761,10 @@ fi
 read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
 
 if [ $gitscript = y ]; then
+# cd /root/Downloads
+# wget http://d43m0n23.com/c0r3/d43M0n_gitmaster.sh
+# chmod a+x d43M0n_gitmaster.sh
+
 cat << EOF > /root/corescript
 cd /root/Downloads
 if [ -d corescript ]; then
@@ -742,7 +772,7 @@ rm -r corescript
 fi
 git clone https://github.com/d43M0n23/corescript.git
 echo 'Corescript Updated'
-EOF
+#EOF
 chmod +x /root/corescript
 echo 'tHanks corescript initialized ;)'
 fi
