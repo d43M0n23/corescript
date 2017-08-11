@@ -22,7 +22,7 @@ vdate=04.07.2017
 # CONFIG THIS PART #
 ####################
 
-main="c0r3"		#Hauptordner - echo ${maindir} or echo $maindir 4 edit
+main="c0r3"		# Hauptordner - echo ${maindir} or echo $maindir 4 edit
 frame="01-frames"	# framework ordner für diverse Scripte /Scanner Aux etc.
 space="02-workspace"	# Arbeitsplatz
 bot="03-botnet"		# Botnetze
@@ -30,7 +30,7 @@ sync="04-h4cK3D"	# h4cK3R-stuff
 crack="05-cracker"	# crack-engines
 script="06-0wnscRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
-lab="08-lab"
+lab="08-lab"		# Labor
 ##################
 # Bash sTyl3!
 clear='\033[0m'                 #alle Attribute zurücksetzen
@@ -200,7 +200,23 @@ echo '| to continue press Return                        |'
 echo '+-------------------------------------------------+'
 read TASTE
 fi
-#2.Nessus comming soon
+
+#2.Nessus Scanner
+
+if [ ! -f /etc/init.d/nessusd ]; then
+wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
+dpkg -i Nessus-6.10.5-debian6_amd64.deb -y
+rm Nessus-6.10.5-debian6_amd64.deb
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| Nessus geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+
+fi
+
 #3.Getsploit.
 
 if [ ! -d getsploit ]; then
