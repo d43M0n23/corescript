@@ -9,7 +9,7 @@ corescript is a framework written in bash for making penetration testing, based 
 
 # STRUCTUR
 
-<ul><li>01-frame: Arachni, getsploit, Katanaframework, MITMf, pybelt, SCANNER-INURLBR, Sniper, TheFatRat, Trity, webpwn3r, WPSeku, xerosploit, xsscrapy, Red-Hawk, Veil-Framework, Zirikatu-Payload, Morpheus</li></ul>	
+<ul><li>01-frame: Arachni, getsploit, Katanaframework, MITMf, pybelt, SCANNER-INURLBR, Sniper, TheFatRat, Trity, webpwn3r, WPSeku, xerosploit, xsscrapy, Red-Hawk, Veil-Framework, Zirikatu-Payload, Morpheus, AngryFuzzer, Debinject</li></ul>	
 <ul><li>02-workspace: 0wn-Kali-build, kali-nethunter, 0wn-kalirpi3</li></ul>
 <ul><li>03-botnet: Ufonet, Xerxes</li></ul>
 <ul><li>04-h4cK3d: (private sync directory in my case)</li></ul>
