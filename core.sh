@@ -761,20 +761,23 @@ fi
 read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
 
 if [ $gitscript = y ]; then
-# cd /root/Downloads
-# wget http://d43m0n23.com/c0r3/d43M0n_gitmaster.sh
-# chmod a+x d43M0n_gitmaster.sh
-
-cat << EOF > /root/corescript
 cd /root/Downloads
-if [ -d corescript ]; then
-rm -r corescript
-fi
-git clone https://github.com/d43M0n23/corescript.git
-echo 'Corescript Updated'
+wget http://d43m0n23.com/c0r3/d43M0n_gitmaster.sh
+# chmod a+x d43M0n_gitmaster.sh
+#cat << EOF > /root/corescript
+#cd /root/Downloads
+cd ..
+#fi
+#if [ -d corescript ]; then
+#rm -r corescript
+#fi
+#git clone https://github.com/d43M0n23/corescript.git
+#echo 'Corescript Updated'
 #EOF
-chmod +x /root/corescript
-echo 'tHanks corescript initialized ;)'
+#chmod +x /root/corescript
+chmod +x /root/Downloads/d43M0n23_gitmaster.sh
+#echo 'tHanks corescript initialized ;)'
+echo 'tHanks d43M0n23_gitmaster initialized ;)'
 fi
 
 #Final MSG
