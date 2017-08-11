@@ -202,7 +202,7 @@ read TASTE
 fi
 
 #2.Nessus Scanner
-if [ $(uname -m) = x86_64 ]
+if [ $(uname -m) = x86_64 ]; then
 if [ ! -f /etc/init.d/nessusd ]; then
 wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 dpkg -i Nessus-6.10.5-debian6_amd64.deb
