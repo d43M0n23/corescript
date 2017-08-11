@@ -428,7 +428,7 @@ if [ ! -d morpheus ]; then
 	cd morpheus
 	chmod +x morpheus.sh
 	cd ..
-slepp 3
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Morpheus MITM geladen und installiert           |'
 echo '+-------------------------------------------------+'
@@ -440,7 +440,7 @@ fi
 #19.AngryFuzzer.
 if [ ! -d angryFuzzer ]; then
         git clone https://github.com/ihebski/angryFuzzer.git
-slepp 3
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| AngryFuzzer geladen und installiert             |'
 echo '+-------------------------------------------------+'
@@ -453,7 +453,7 @@ fi
 #20.Debinject.
 if [ ! -d Debinject ]; then
         git clone https://github.com/UndeadSec/Debinject.git
-slepp 3
+sleep 3
 echo '+-------------------------------------------------+'
 echo '| Debinject geladen und installiert               |'
 echo '+-------------------------------------------------+'
