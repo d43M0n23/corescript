@@ -775,7 +775,7 @@ cd ..
 #echo 'Corescript Updated'
 #EOF
 #chmod +x /root/corescript
-chmod +x /root/Downloads/d43M0n23_gitmaster.sh
+chmod +x /root/Downloads/d43M0n_gitmaster.sh
 #echo 'tHanks corescript initialized ;)'
 echo 'tHanks d43M0n23_gitmaster initialized ;)'
 fi
