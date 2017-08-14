@@ -1,6 +1,7 @@
 #!/bin/bash
 #startscript daemon23_update
 #update-rc.d DIENSTNAME defaults 80 10
+#update-rc.d -f privoxy remove && update-rc.d -f privoxy defaults && update-rc.d -f privoxy enable
 
 case "$1" in
 start)
