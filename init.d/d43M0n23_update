@@ -1,7 +1,26 @@
 #!/bin/bash
+### BEGIN INIT INFO
+# Provides:          d43M0n23_update
+# Required-Start:    $remote_fs $syslog $network
+# Required-Stop:     $remote_fs $syslog $network
+# Should-Start:      $portmap
+# Should-Stop:       $portmap
+# X-Start-Before:    nis
+# X-Stop-After:      nis
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# X-Interactive:     true
+# Short-Description: Example initscript
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+
+
 #startscript daemon23_update
 #update-rc.d DIENSTNAME defaults 80 10
-#update-rc.d -f privoxy remove && update-rc.d -f privoxy defaults && update-rc.d -f privoxy enable
+#update-rc.d -f d43M0n23_update remove && update-rc.d -f d43M0n23_update defaults && update-rc.d -f d43M0n23_update enable
+
 
 case "$1" in
 start)
