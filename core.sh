@@ -722,6 +722,14 @@ EOF
 chmod +x /root/d43M0n23_update
 echo "Update-Script created!"
 fi
+## d43M0n23 update init.d/script
+read -p "Create the d43M0n23-Deb.update INIT.D start script (y/n)? " daemonupinit
+if [ $daemonupinit = y ]; then
+cp init.d/d43M0n23_update /etc/init.d/
+chmod +rwx /etc/init.d/d43M0n23_update
+update-rc.d -f d43M0n23_update remove && update-rc.d -f d43M0n23_update defaults && update-rc.d -f d43M0n23_update enable
+echo "Runlevel aktualisiert!"
+fi
 # Sync
 read -p "Create the d43M0n23-Sync script (y/n)? " syncscript
 
