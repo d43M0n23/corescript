@@ -745,6 +745,7 @@ if [ -d /root/Pictures ];then
 cp -R /root/c0r3/04-h4cK3D/walls/* /root/Pictures/
 fi
 cp /root/c0r3/04-h4cK3D/.bash_aliases /root/
+cp /root/c0r3/04-h4cK3D/scripts/* /root/c0r3/06-0wnscRipts/
 echo 'synC all - tHx'
 EOF
 chmod +x /root/sync
@@ -788,20 +789,8 @@ read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
 if [ $gitscript = y ]; then
 cd /root/Downloads
 wget http://d43m0n23.com/c0r3/d43M0n23_gitmaster.sh
-# chmod a+x d43M0n_gitmaster.sh
-#cat << EOF > /root/corescript
-#cd /root/Downloads
 cd ..
-#fi
-#if [ -d corescript ]; then
-#rm -r corescript
-#fi
-#git clone https://github.com/d43M0n23/corescript.git
-#echo 'Corescript Updated'
-#EOF
-#chmod +x /root/corescript
 chmod +x /root/Downloads/d43M0n23_gitmaster.sh
-#echo 'tHanks corescript initialized ;)'
 echo 'tHanks d43M0n23_gitmaster initialized ;)'
 fi
 
