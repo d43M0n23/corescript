@@ -104,6 +104,7 @@ echo '| 17.Zirikatu-Payload.                            |'
 echo '| 18.Morpheus MITM.                               |'
 echo '| 19.AngryFuzzer.                                 |'
 echo '| 20.Debinject.                                   |'
+echo '| 21.BruteX.                                      |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -479,6 +480,23 @@ echo '+-------------------------------------------------+'
 read TASTE
 fi
 
+#21.Debinject.
+if [ ! -d BruteX ]; then
+        git clone https://github.com/1N3/BruteX.git
+	cd BruteX
+	chmod +x install.sh
+	./install.sh
+	cd ..
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| BruteX geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+echo '| to continue press Return                        |'
+echo '+-------------------------------------------------+'
+read TASTE
+fi
+
+
 #02-workspace
 cd /root/${main}/${space}/
 clear
@@ -663,6 +681,7 @@ if [ $wifiattack = y ]; then
 	git clone https://github.com/P0cL4bs/WiFi-Pumpkin.git
 	cd WiFi-Pumpkin
 	./installer.sh --install
+	cd ..
         echo '+-------------------------------------------------+'
         echo '| Wifi Pumpkin Installed                          |'
         echo '+-------------------------------------------------+'
