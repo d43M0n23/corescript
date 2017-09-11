@@ -96,7 +96,7 @@ echo '| 8.Sn1per.                                       |'
 echo '| 9.TheFatRat.                                    |'
 echo '| 10.Trity.                                       |'
 echo '| 11.Webpwn3r.                                    |'
-echo '| 12.Finddsploi                                   |'
+echo '| 12.Findsploit.                                  |'
 echo '| 13.Xerosploit.                                  |'
 echo '| 14.Xsscrapy.                                    |'
 echo '| 15.Red-Hawk                                     |'
@@ -362,14 +362,15 @@ echo '+-------------------------------------------------+'
 fi
 
 #12.Findesploit.
-if [ ! -d Findesploit ]; then
+if [ ! -d Findsploit ]; then
 git clone https://github.com/1N3/Findsploit.git
-cd Findesploit
+cd Findsploit
+chmod +x install.sh
 ./install.sh
 cd ..
 sleep 3
 echo '+-------------------------------------------------+'
-echo '| Findesploit geladen und installiert             |'
+echo '| Findsploit geladen und installiert               |'
 echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
