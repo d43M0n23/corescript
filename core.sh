@@ -17,7 +17,7 @@
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=1.0
-vdate=04.07.2017
+vdate=11.09.2017
 ####################
 # CONFIG THIS PART #
 ####################
@@ -31,6 +31,7 @@ crack="05-cracker"	# crack-engines
 script="06-0wnscRipts"	# eigene Scripte
 wifi="07-wifi"		# Wifi-Attacken
 lab="08-lab"		# Labor
+cms="09-cms"		# CMS Tools like joomla,wordpress
 ##################
 # Bash sTyl3!
 clear='\033[0m'                 #alle Attribute zurücksetzen
@@ -95,7 +96,7 @@ echo '| 8.Sn1per.                                       |'
 echo '| 9.TheFatRat.                                    |'
 echo '| 10.Trity.                                       |'
 echo '| 11.Webpwn3r.                                    |'
-echo '| 12.WPSeku.                                      |'
+echo '| 12.Finddsploi                                   |'
 echo '| 13.Xerosploit.                                  |'
 echo '| 14.Xsscrapy.                                    |'
 echo '| 15.Red-Hawk                                     |'
@@ -176,6 +177,10 @@ if [ ! -d ${lab} ]; then
 fi
 
 
+if [ ! -d ${cms} ]; then
+        mkdir ${cms}
+        echo "${lab} wurde angelegt"
+fi
 
 echo "
 fehlende Ordner wurden erstellt.
@@ -197,9 +202,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Arachni geladen und installiert                 |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #2.Nessus Scanner
@@ -212,9 +217,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Nessus geladen und installiert                  |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 
 fi
 fi
@@ -230,9 +235,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Getsploit geladen und installiert               |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #4.Katana-Framework.
@@ -243,9 +248,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Katana geladen und installiert                  |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #5.MITMf.
@@ -260,9 +265,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| MITMf geladen und installiert                   |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #6.Pybelt.
@@ -276,9 +281,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Pybelt geladen und installiert                  |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #7.Scanner-Inurl-BR.
@@ -292,9 +297,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| inurlbr geladen und installiert                 |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #8.Sn1per.
@@ -308,9 +313,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Sn1per geladen und installiert                  |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #9.TheFatRat.
@@ -323,9 +328,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| TheFatRat geladen und installiert               |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #10.Trity.
@@ -339,9 +344,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Trity geladen und installiert                   |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #11.Webpwn3r.
@@ -351,21 +356,24 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Webpwn3r geladen und installiert                |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
-#12.WPSeku.
-if [ ! -d WPSeku ]; then
-git clone https://github.com/m4ll0k/WPSeku.git
+#12.Findesploit.
+if [ ! -d Findesploit ]; then
+git clone https://github.com/1N3/Findsploit.git
+cd Findesploit
+./install.sh
+cd ..
 sleep 3
 echo '+-------------------------------------------------+'
-echo '| WPSeku geladen und installiert                  |'
+echo '| Findesploit geladen und installiert             |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #13.Xerosploit.
@@ -377,9 +385,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xerosploit geladen und installiert              |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #14.Xsscrapy.
@@ -393,9 +401,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Xss-Crapy geladen und installiert               |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #15.Red-Hawk.
@@ -423,9 +431,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Veil-Framework geladen und installiert          |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #17.Zirikatu.
@@ -435,9 +443,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Zirikatu-Payload geladen und installiert        |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #18.Morpheus.
@@ -450,9 +458,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Morpheus MITM geladen und installiert           |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 #19.AngryFuzzer.
@@ -462,9 +470,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| AngryFuzzer geladen und installiert             |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 
@@ -475,12 +483,12 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| Debinject geladen und installiert               |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
-#21.Debinject.
+#21.BruteX.
 if [ ! -d BruteX ]; then
         git clone https://github.com/1N3/BruteX.git
 	cd BruteX
@@ -491,9 +499,9 @@ sleep 3
 echo '+-------------------------------------------------+'
 echo '| BruteX geladen und installiert                  |'
 echo '+-------------------------------------------------+'
-echo '| to continue press Return                        |'
-echo '+-------------------------------------------------+'
-read TASTE
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
 fi
 
 
@@ -720,8 +728,48 @@ if [ $wifiattack = y ]; then
 	fi
 
 fi
+echo 'WIFI installed - Job Done!'
 cd ..
 ###
+
+## CMS
+#06 0wnsRipt
+#comming soon.
+#07 WIFI
+cd /root/${main}/${cms}/
+clear
+echo '+-------------------------------------------------+'
+echo '| CMS-Attacker                                    |'
+echo '+-------------------------------------------------+'
+echo '| 1.WPSeku.                                       |'
+echo '| 2.D-TECT | Wordpress Hacking Framework.         |'
+echo '+-------------------------------------------------+'
+read -p "Download CMS Attack Tools (y/n)? " cmsattack
+##
+## Schleife
+##
+if [ $cmsattack = y ]; then
+        #1.WPSeku.
+	if [ ! -d WPSeku ]; then
+	git clone https://github.com/m4ll0k/WPSeku.git
+	echo '+-------------------------------------------------+'
+	echo '| WPSeku geladen und installiert                  |'
+	echo '+-------------------------------------------------+'
+	fi
+	#2.D-Tect.
+        if [ ! -d D-TECT ]; then
+        git clone https://github.com/shawarkhanethicalhacker/D-TECT.git
+	cd D-TECT
+	chmod +x d-tect.py
+	cd ..
+        echo '+-------------------------------------------------+'
+        echo '| D-Tect geladen und installiert                  |'
+        echo '+-------------------------------------------------+'
+        fi
+fi
+echo 'CMS installed - Job Done!'
+cd ..
+
 # Update
 clear
 read -p "Create the d43M0n23-Deb.update script (y/n)? " daemonup
