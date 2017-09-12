@@ -106,6 +106,7 @@ echo '| 18.Morpheus MITM.                               |'
 echo '| 19.AngryFuzzer.                                 |'
 echo '| 20.Debinject.                                   |'
 echo '| 21.BruteX.                                      |'
+echo '| 22.RivIP-PHP.                                   |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -499,6 +500,19 @@ if [ ! -d BruteX ]; then
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| BruteX geladen und installiert                  |'
+echo '+-------------------------------------------------+'
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
+fi
+
+
+#22.RivIP-PHP.
+if [ ! -d rivip-php ]; then
+        git clone https://github.com/mdp4rv3z/rivip-php.git
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| RivIP-PHP geladen und installiert               |'
 echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
