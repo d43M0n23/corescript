@@ -1,5 +1,5 @@
 #!/bin/bash
-# corescript v.1.0
+# corescript v.1.1
 # create folder and subs
 # include Frames,Aux;Attack
 #
@@ -16,7 +16,7 @@
 # Nessus,OpenVas
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
-version=1.0
+version=1.1
 vdate=11.09.2017
 ####################
 # CONFIG THIS PART #
@@ -585,7 +585,7 @@ if [ $botnet = y ]; then
 	fi
  echo 'Botnet installed - Job Done!'
 fi
-sleep 3
+#sleep 3
 cd ..
 
 #05 Cracker
@@ -634,7 +634,7 @@ if [ $owncrack = y ]; then
         fi
 echo 'Cracker installed - Job Done!'
 fi
-sleep 3
+#sleep 3
 cd ..
 #06 0wnsRipt
 #comming soon.
@@ -758,6 +758,7 @@ echo '| CMS-Attacker                                    |'
 echo '+-------------------------------------------------+'
 echo '| 1.WPSeku.                                       |'
 echo '| 2.D-TECT | Wordpress Hacking Framework.         |'
+echo '| 3.CMSmap | Cms-Scanner.                         |'
 echo '+-------------------------------------------------+'
 read -p "Download CMS Attack Tools (y/n)? " cmsattack
 ##
@@ -781,6 +782,14 @@ if [ $cmsattack = y ]; then
         echo '| D-Tect geladen und installiert                  |'
         echo '+-------------------------------------------------+'
         fi
+        #2.CMSmap.
+        if [ ! -d CMSmap ]; then
+	git clone https://github.com/Dionach/CMSmap.git
+        echo '+-------------------------------------------------+'
+        echo '| CMSmap geladen und installiert                  |'
+        echo '+-------------------------------------------------+'
+        fi
+
 fi
 echo 'CMS installed - Job Done!'
 cd ..
