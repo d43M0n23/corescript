@@ -759,6 +759,7 @@ echo '+-------------------------------------------------+'
 echo '| 1.WPSeku.                                       |'
 echo '| 2.D-TECT | Wordpress Hacking Framework.         |'
 echo '| 3.CMSmap | Cms-Scanner.                         |'
+echo '| 4.Joomlavs | VS.                                |'
 echo '+-------------------------------------------------+'
 read -p "Download CMS Attack Tools (y/n)? " cmsattack
 ##
@@ -782,9 +783,20 @@ if [ $cmsattack = y ]; then
         echo '| D-Tect geladen und installiert                  |'
         echo '+-------------------------------------------------+'
         fi
-        #2.CMSmap.
+        #3.CMSmap.
         if [ ! -d CMSmap ]; then
 	git clone https://github.com/Dionach/CMSmap.git
+        echo '+-------------------------------------------------+'
+        echo '| CMSmap geladen und installiert                  |'
+        echo '+-------------------------------------------------+'
+        fi
+        #3.CMSmap.
+        if [ ! -d joomlavs ]; then
+        git clone https://github.com/rastating/joomlavs.git
+	apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev libcurl4-openssl-dev -y
+	cd joomlavs
+	sudo gem install bundler && bundle install
+	cd ..
         echo '+-------------------------------------------------+'
         echo '| CMSmap geladen und installiert                  |'
         echo '+-------------------------------------------------+'
