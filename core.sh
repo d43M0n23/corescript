@@ -17,7 +17,7 @@
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=1.1
-vdate=11.09.2017
+vdate=15.09.2017
 ####################
 # CONFIG THIS PART #
 ####################
@@ -849,6 +849,7 @@ cp -R /root/c0r3/04-h4cK3D/walls/* /root/Pictures/
 fi
 cp /root/c0r3/04-h4cK3D/.bash_aliases /root/
 cp /root/c0r3/04-h4cK3D/scripts/* /root/c0r3/06-0wnscRipts/
+cp -r /root/c0r3/04-h4cK3D/meta_modules/exploits /root/.msf4/modules/
 echo 'synC all - tHx'
 EOF
 chmod +x /root/sync
@@ -891,6 +892,7 @@ read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
 
 if [ $gitscript = y ]; then
 cd /root/Downloads
+rm d43M0n23_gitmaster.sh
 wget http://d43m0n23.com/c0r3/d43M0n23_gitmaster.sh
 cd ..
 chmod +x /root/Downloads/d43M0n23_gitmaster.sh
