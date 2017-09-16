@@ -1,5 +1,5 @@
 # corescript v 1.0
-last edit: 04.07.2017
+last edit: 16.09.2017
 # ABOUT.
 
 corescript is a framework written in bash for making penetration testing, based on a simple and comprehensive structure for anyone to use, modify and share, the goal is is to unify tools serve for professional when making a penetration test or simply as a routine tool, The current version is not completely stable.
@@ -22,7 +22,7 @@ corescript is a framework written in bash for making penetration testing, based 
 |Distribution | Version Check | supported | dependencies already installed |status |
 ----------|-------|------|------|-------|
 |Kali Linux|1.0 | yes| yes | working   |
-|Debian(8)|1.0 | yes| yes | working   |
+|Debian(9)|1.0 | yes| yes | working   |
 |Raspbian|1.0 |yes|No|working   |
 |Ubuntu|1.0 |yes|No|working   |
 |Xbuntu|1.0 |yes|No|working  |
