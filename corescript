@@ -15,7 +15,7 @@ vdate=20.09.2017
 # CONFIG THIS PART #
 ####################
 
-
+################################################################################
 main="c0r3"		# mainfolder - echo ${main} or echo $main 4 / $HOME/main
 frame="01-frames"	# framework directory for scripts /scanner Aux etc.
 space="02-workspace"	# workspace
@@ -42,7 +42,7 @@ blue='\033[34m'                 #Schriftfarbe blau
 mag='\033[35m'                  #Schriftfarbe magenta
 turk='\033[36m'                 #Schriftfarbe türkis
 white='\033[37m'                #Schriftfarbe weiß
-#################
+################################################################################
 
 ## Funktion
 # Local Destination
