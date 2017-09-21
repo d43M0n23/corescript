@@ -14,7 +14,7 @@ corescript is a framework written in bash for making penetration testing, based 
 <ul><li>03-botnet: Ufonet, Xerxes</li></ul>
 <ul><li>04-h4cK3d: (private sync directory in my case)</li></ul>
 <ul><li>05-cracker: Brut3K1t, Dagon, PyBozoCrack</li></ul>
-<ul><li>06-0wnsRipt: usefull scripts</li></ul>
+<ul><li>06-0wnscRipt: usefull scripts</li></ul>
 <ul><li>07-wifi: Bully, Fluxion, Netattack, Netattack2, Wifiphisher, Wifi-Pumpkin, Ghost-Phisher, MDK3-AP, Airgeddon</li></ul>
 <ul><li>08-cms: WPSeku, D-TECT, Cmsmap, Joomlavs</li></ul>
 
