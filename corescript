@@ -26,22 +26,21 @@ script="06-0wnscRipts"	# own scripts
 wifi="07-wifi"		# Wifi-Attacker Scripts
 lab="08-lab"		# Lab
 cms="09-cms"		# CMS Tools like joomla,wordpress
-##################
+################################################################################
 # Bash sTyl3!
-clear='\033[0m'                 #alle Attribute zurücksetzen
-red='\e[31m'
-bold='\033[1m'                  #Fettschrift
-underline='\033[4m'             #Unterstreichen
-blinken='\033[5m'               #Blinken
-invers='\033[7m'                #inverse Darstellung
-black='\033[30m'                #Schriftfarbe schwarz
-red='\033[31m'                  #Schriftfarbe rot
-green='\033[32m'                #Schriftfarbe grün
-yell='\033[33m'                 #Schriftfarbe gelb
-blue='\033[34m'                 #Schriftfarbe blau
-mag='\033[35m'                  #Schriftfarbe magenta
-turk='\033[36m'                 #Schriftfarbe türkis
-white='\033[37m'                #Schriftfarbe weiß
+clear='\033[0m'         #alle Attribute zurücksetzen
+bold='\033[1m'          #Fettschrift
+underline='\033[4m'     #Unterstreichen
+blinken='\033[5m'       #Blinken
+invers='\033[7m'        #inverse Darstellung
+black='\033[30m'        #Schriftfarbe schwarz
+red='\033[31m'          #Schriftfarbe rot
+green='\033[32m'        #Schriftfarbe grün
+yell='\033[33m'         #Schriftfarbe gelb
+blue='\033[34m'         #Schriftfarbe blau
+mag='\033[35m'          #Schriftfarbe magenta
+turk='\033[36m'         #Schriftfarbe türkis
+white='\033[37m'        #Schriftfarbe weiß
 ################################################################################
 
 ## Funktion
@@ -89,7 +88,10 @@ exit
 fi
 
 #UNINSTALL
-
+if [ "$1" = "--deinstall" ]; then
+echo -e "\n${turk}You have select the uninstall Feature${clear}"
+sleep 2
+fi
 
 clear
 #################
@@ -780,10 +782,7 @@ echo 'WIFI installed - Job Done!'
 cd ..
 ###
 
-## CMS
-#06 0wnsRipt
-#comming soon.
-#07 WIFI
+#08 CMS
 cd /root/${main}/${cms}/
 clear
 echo '+-------------------------------------------------+'
