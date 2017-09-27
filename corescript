@@ -9,7 +9,7 @@
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=v1.0.0
-vdate=20.09.2017
+vdate=27.09.2017
 
 ####################
 # CONFIG THIS PART #
@@ -91,6 +91,12 @@ fi
 if [ "$1" = "--deinstall" ]; then
 echo -e "\n${turk}You have select the uninstall Feature${clear}"
 sleep 2
+rm -f /usr/bin/corescript
+cd /usr/share/
+rm -r corescript
+cd
+exit
+
 fi
 
 clear

@@ -43,6 +43,10 @@ Edit the Config part
 corescript post information if we have a new release. to update the script use:
 <pre><i><n>corescript --update</pre></i></n>
 
+# DE-INSTALL
+to deinstallation corescript use following command
+<pre><i><n>corescript --deinstall</pre></i></n> 
+
 that's it ,)
 Have fun & n1c3 d4Y. 3xpl0it.com
 
