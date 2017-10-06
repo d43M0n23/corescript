@@ -1,5 +1,5 @@
 #!/bin/bash
-# corescript v1.0.0
+# corescript v1.0.1
 # create folder and subs
 # include Frames,Aux;Attack
 #
@@ -694,6 +694,7 @@ echo '| 6.Wifi-Pumpkin.                                 |'
 echo '| 7.Ghost-Phisher.                                |'
 echo '| 8.MDK3 AP.                                      |'
 echo '| 9.Airgeddon.                                    |'
+echo '| 10.Wifite v.2.                                  |'
 echo '+-------------------------------------------------+'
 read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
@@ -782,6 +783,16 @@ if [ $wifiattack = y ]; then
         echo '| Airgeddon Installed                             |'
         echo '+-------------------------------------------------+'
 	fi
+        #Airgeddon
+        if [ ! -d wifite2 ]; then
+        git clone https://github.com/derv82/wifite2.git
+        cd wifite2
+        chmod +x Wifite2.py
+        cd ..
+        echo '+-------------------------------------------------+'
+        echo '| Wifite v.2 Installed                            |'
+        echo '+-------------------------------------------------+'
+        fi
 
 fi
 echo 'WIFI installed - Job Done!'
