@@ -108,7 +108,7 @@ sleep 3
 
 sh_stage6 () {
 echo -e "Flush iptables on this Host:\n";
-iptables -f;
+iptables -F;
 sleep 3
 }
 
