@@ -1,0 +1,150 @@
+#!/bin/bash
+
+######################################################################
+# wondershaper
+# Converts
+# Needs wondershaper installed
+# command:
+######################################################################
+
+######################################################################
+# last modify: 19.10.2017
+# bug or anything: d43M0n23@3xpl0it.com
+######################################################################
+
+######################################################################
+# Bash sTyl3!
+clear='\033[0m'			#alle Attribute zurücksetzen
+bold='\033[1m'			#Fettschrift
+red='\033[31m'			#rot
+green='\033[32m'		#grün
+yell='\033[33m'			#gelb
+blue='\033[34m'			#blau
+mag='\033[35m'			#magenta
+turk='\033[36m'			#türkis
+white='\033[37m'		#weiß
+orange='\033[93m'               #orange
+######################################################################
+
+# -------------------------------------
+# Prompt displays available
+# chose your own 'personalized prompt'.
+# -▷   -▶   '>'  ☭   ✿   ☯   ☠   ☆   ➽  ♛  ⊶
+# -------------------------------------
+PrompT=--▷
+
+
+# -----------------------------------
+# Colorise shell Script output leters
+# -----------------------------------
+
+Colors() {
+Escape="\033";
+  white="${Escape}[0m";
+  RedF="${Escape}[31m";
+  GreenF="${Escape}[32m";
+  YellowF="${Escape}[33m";
+  BlueF="${Escape}[34m";
+  CyanF="${Escape}[36m";
+  orange="${Escape}[93m";
+Reset="${Escape}[0m";
+}
+
+
+##Base-Variablen
+DATE=$(date +%F)
+version=v1.0
+vdate=19.10.2017
+
+
+#---------------
+# MAIN FUNCTIONS
+# --------------
+if ! hash wondershaper 2>/dev/null; then sudo apt-get update && apt-get upgrade -y; sudo apt-get install --yes wondershaper ; fi
+
+# ---------------
+# SCRIPT FUNCTION
+# ---------------
+
+
+sh_stage1 () {
+echo -e "Shape Settings Vornehmen:";
+read -p "Interface: " interface;
+read -p "Download-Speed in Mbit/s: " download
+read -p "Upload-Speed in Mbit/s: " upload
+wondershaper $interface ${download}000 ${upload}000
+echo -e "Interface ${interface} wurde mit Download: ${download} Mbit/s und Upload: ${upload} limitiert."
+sleep 3
+}
+
+sh_stage2 () {
+echo -e "Geshaptes Interface reseten:"
+read -p "Interface: " interface
+wondershaper remove $interface
+echo -e "${interface} wurde reseted."
+sleep 3
+}
+
+# -------------------------
+# FUNTION TO EXIT FRAMEWORK
+# -------------------------
+sh_exit() {
+echo -e "${BlueF}[*]${white} Exit SHAPING Script...${Reset}";
+sleep 1
+exit
+}
+
+
+# ---------------
+# START MAINSTAGE
+# ---------------
+
+sh_main () {
+echo "nothing" > /dev/null 2>&1
+}
+
+Colors;
+# -----------------------------
+# MAIN MENU SHELLCODE GENERATOR
+# -----------------------------
+# Loop forever
+while :
+do
+clear
+echo -e '\n'
+echo -e '                                   ________ '
+echo -e '       ____ ___  ___  ____ _____ _/  _/ __ \'
+echo -e '      / __ `__ \/ _ \/ __ `/ __ `// // /_/ /'
+echo -e '     / / / / / /  __/ /_/ / /_/ // // ____/ '
+echo -e '    /_/ /_/ /_/\___/\__, /\__,_/___/_/      '
+echo -e '               /____/                   '
+#echo -e "\n${orange}    + -- --=[https://3xpl0it.com${clear}"
+sleep 1
+
+echo -e "\n"
+cat <<EOF
+    Shape your interface ;)
+EOF
+echo -e "\n"
+cat << !
+    _____________________________________________________________________
+    | OPTION |                  DESCRIPTION(filters)                    |
+    ---------------------------------------------------------------------
+    |   1    -  Shape Interface                                         |
+    |   2    -  Reset Interface                                         |
+    |   E    -  Exit/close Traffic-Shaper                               |
+    ---------------------------------------------------------------------
+!
+#sleep 1
+#echo -e ${white} Chose Your Option${RedF}: ${Reset};
+#echo -n "$PrompT"
+#read choice
+read -p "     Chose Your Option:" choice
+case $choice in
+1) sh_stage1 ;;
+2) sh_stage2 ;;
+e) sh_exit ;;
+E) sh_exit ;;
+*) echo -e "\"$choice\": is not a valid Option"; sleep 1 ;;
+esac
+done
