@@ -1,0 +1,189 @@
+#!/bin/bash
+
+######################################################################
+# megaR4id
+# Converts syntax of LSI Raid Controller 2 easy use with short command
+# Needs MegaRaid/CLi installed
+# command: > megaR4id or megaR4id --option
+######################################################################
+
+######################################################################
+# last modify: 09.10.2017
+# bug or anything: d43M0n23@3xpl0it.com
+######################################################################
+
+######################################################################
+# Bash sTyl3!
+clear='\033[0m'			#alle Attribute zurücksetzen
+bold='\033[1m'			#Fettschrift
+red='\033[31m'			#rot
+green='\033[32m'		#grün
+yell='\033[33m'			#gelb
+blue='\033[34m'			#blau
+mag='\033[35m'			#magenta
+turk='\033[36m'			#türkis
+white='\033[37m'		#weiß
+orange='\033[93m'               #orange
+######################################################################
+
+# -------------------------------------
+# Prompt displays available
+# chose your own 'personalized prompt'.
+# -▷   -▶   '>'  ☭   ✿   ☯   ☠   ☆   ➽  ♛  ⊶
+# -------------------------------------
+PrompT=--▷
+
+
+# -----------------------------------
+# Colorise shell Script output leters
+# -----------------------------------
+
+Colors() {
+Escape="\033";
+  white="${Escape}[0m";
+  RedF="${Escape}[31m";
+  GreenF="${Escape}[32m";
+  YellowF="${Escape}[33m";
+  BlueF="${Escape}[34m";
+  CyanF="${Escape}[36m";
+  orange="${Escape}[93m";
+Reset="${Escape}[0m";
+}
+
+
+##Base-Variablen
+DATE=$(date +%F)
+version=v1.0
+vdate=08.10.2017
+
+
+#---------------
+# MAIN FUNCTIONS
+# --------------
+
+# ---------------
+# SCRIPT FUNCTION
+# ---------------
+
+
+sh_stage1 () {
+echo -e "Block Single IP";
+read -p "Enter IP: " ip;
+iptables -A INPUT -s $ip -j DROP;
+echo -e "${ip} wurde in den Blockrules eingetragen"
+sleep 3
+}
+
+sh_stage2 () {
+echo -e "Block Range IP like 116.10.197.0"
+read -p "Enter IP: " ip
+iptables -A INPUT -s $ip/24 -j DROP
+echo -e "${ip} wurde in den Blockrules eingetragen"
+sleep 3
+}
+
+sh_stage3 () {
+echo -e "Block Range IP like 116.10.197.0"
+read -p "Enter IP: " ip
+iptables -A INPUT -s $ip/16 -j DROP
+echo -e "${ip} wurde in den Blockrules eingetragen"
+sleep 3
+}
+
+
+sh_stage4 () {
+echo -e "Block Range IP like 116.10.0.0"
+read -p "Enter IP: " ip
+iptables -A INPUT -s $ip/8 -j DROP
+echo -e "${ip} wurde in den Blockrules eingetragen"
+sleep 3
+}
+
+sh_stage5 () {
+echo -e "Show full iptables on this Host:\n";
+iptables -vL;
+sleep 3
+}
+
+
+sh_stage6 () {
+echo -e "Flush iptables on this Host:\n";
+iptables -f;
+sleep 3
+}
+
+
+# -------------------------
+# FUNTION TO EXIT FRAMEWORK
+# -------------------------
+sh_exit() {
+echo -e "${BlueF}[*]${white} Exit IPTABLES Script...${Reset}";
+sleep 1
+exit
+}
+
+
+# ---------------
+# START MAINSTAGE
+# ---------------
+
+sh_main () {
+echo "nothing" > /dev/null 2>&1
+}
+
+Colors;
+# -----------------------------
+# MAIN MENU SHELLCODE GENERATOR
+# -----------------------------
+# Loop forever
+while :
+do
+clear
+echo -e '\n'
+echo -e '                                   ________ '
+echo -e '       ____ ___  ___  ____ _____ _/  _/ __ \'
+echo -e '      / __ `__ \/ _ \/ __ `/ __ `// // /_/ /'
+echo -e '     / / / / / /  __/ /_/ / /_/ // // ____/ '
+echo -e '    /_/ /_/ /_/\___/\__, /\__,_/___/_/      '
+echo -e '               /____/                   '
+echo -e "\n${orange}    + -- --=[https://3xpl0it.com${clear}"
+sleep 1
+
+echo -e "\n"
+cat <<EOF
+    mega-ip the easy way to Block Kiddys etc.
+EOF
+#echo -e "Latest Release: ${LATEST_VERSION}"
+echo -e "\n"
+cat << !
+    _____________________________________________________________________
+    | OPTION |                  DESCRIPTION(filters)                    |
+    ---------------------------------------------------------------------
+    |   1    -  Block like 192.168.8.7                                  |
+    |   2    -  Block like 192.168.8.0/24                               |
+    |   3    -  Block like 192.168.0.0/16                               |
+    |   4    -  Block like 192.0.0.0/8                                  |
+    |   S    -  Show full iptables on this Host                         |
+    |   F    -  Flush iptables on this Host                             |
+    |   E    -  Exit/close megaIP                                       |
+    ---------------------------------------------------------------------
+!
+#sleep 1
+#echo -e ${white} Chose Your Option${RedF}: ${Reset};
+#echo -n "$PrompT"
+#read choice
+read -p "     Chose Your Option:" choice
+case $choice in
+1) sh_stage1 ;;
+2) sh_stage2 ;;
+3) sh_stage3 ;;
+4) sh_stage4 ;;
+s) sh_stage5 ;;
+S) sh_stage5 ;;
+f) sh_stage6 ;;
+F) sh_stage6 ;;
+e) sh_exit ;;
+E) sh_exit ;;
+*) echo -e "\"$choice\": is not a valid Option"; sleep 1 ;;
+esac
+done
