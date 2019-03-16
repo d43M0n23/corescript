@@ -467,9 +467,10 @@ fi
 if [ ! -d Veil ]; then
         git clone https://github.com/Veil-Framework/Veil.git
 	cd Veil/
-	cd setup
-	./setup.sh -c
-	cd ..
+	./config/setup.sh --force --silent
+#	cd setup
+#	./setup.sh -c
+#	cd ..
 	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
