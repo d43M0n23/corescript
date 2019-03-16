@@ -250,28 +250,28 @@ echo '+-------------------------------------------------+'
 fi
 
 #2.Nessus Scanner
-if [ $(uname -m) = x86_64 ]; then
-if [ ! -f /etc/init.d/nessusd ]; then
-wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
-dpkg -i Nessus-6.10.5-debian6_amd64.deb
-rm Nessus-6.10.5-debian6_amd64.deb
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Nessus geladen und installiert                  |'
-echo '+-------------------------------------------------+'
-#echo '| to continue press Return                        |'
+#if [ $(uname -m) = x86_64 ]; then
+#if [ ! -f /etc/init.d/nessusd ]; then
+#wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
+#dpkg -i Nessus-6.10.5-debian6_amd64.deb
+#rm Nessus-6.10.5-debian6_amd64.deb
+##sleep 3
+##echo '+-------------------------------------------------+'
+##echo '| Nessus geladen und installiert                  |'
+##echo '+-------------------------------------------------+'
+##echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
 
-fi
-fi
+#fi
+#fi
 
 #3.Getsploit.
 
 if [ ! -d getsploit ]; then
 git clone https://github.com/vulnersCom/getsploit.git
 cd getsploit
-python getsploit.py
+python setup.py
 cd ..
 sleep 3
 echo '+-------------------------------------------------+'
