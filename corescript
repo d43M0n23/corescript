@@ -377,7 +377,8 @@ fi
 
 #10.Trity.
 if [ ! -d Trity ]; then
-git clone https://github.com/toxic-ig/Trity.git
+#git clone https://github.com/toxic-ig/Trity.git
+git clone https://github.com/S4Y4N/Trity.git
 cd Trity
 python install.py
 cd ..
