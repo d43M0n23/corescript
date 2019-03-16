@@ -826,7 +826,7 @@ if [ $cmsattack = y ]; then
 	fi
 	#2.D-Tect.
         if [ ! -d D-TECT ]; then
-        git clone https://github.com/shawarkhanethicalhacker/D-TECT.git
+	git clone https://github.com/bibortone/D-Tech
 	cd D-TECT
 	chmod +x d-tect.py
 	cd ..
