@@ -9,7 +9,7 @@
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=v1.0.0
-vdate=06.10.2017
+vdate=15.03.2019
 
 ####################
 # CONFIG THIS PART #
@@ -250,28 +250,28 @@ echo '+-------------------------------------------------+'
 fi
 
 #2.Nessus Scanner
-if [ $(uname -m) = x86_64 ]; then
-if [ ! -f /etc/init.d/nessusd ]; then
-wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
-dpkg -i Nessus-6.10.5-debian6_amd64.deb
-rm Nessus-6.10.5-debian6_amd64.deb
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Nessus geladen und installiert                  |'
-echo '+-------------------------------------------------+'
-#echo '| to continue press Return                        |'
+#if [ $(uname -m) = x86_64 ]; then
+#if [ ! -f /etc/init.d/nessusd ]; then
+#wget http://d43M0n23.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
+#dpkg -i Nessus-6.10.5-debian6_amd64.deb
+#rm Nessus-6.10.5-debian6_amd64.deb
+##sleep 3
+##echo '+-------------------------------------------------+'
+##echo '| Nessus geladen und installiert                  |'
+##echo '+-------------------------------------------------+'
+##echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
 
-fi
-fi
+#fi
+#fi
 
 #3.Getsploit.
 
 if [ ! -d getsploit ]; then
 git clone https://github.com/vulnersCom/getsploit.git
 cd getsploit
-python getsploit.py
+python setup.py
 cd ..
 sleep 3
 echo '+-------------------------------------------------+'
@@ -377,7 +377,8 @@ fi
 
 #10.Trity.
 if [ ! -d Trity ]; then
-git clone https://github.com/toxic-ig/Trity.git
+#git clone https://github.com/toxic-ig/Trity.git
+git clone https://github.com/S4Y4N/Trity.git
 cd Trity
 python install.py
 cd ..
@@ -466,9 +467,10 @@ fi
 if [ ! -d Veil ]; then
         git clone https://github.com/Veil-Framework/Veil.git
 	cd Veil/
-	cd setup
-	./setup.sh -c
-	cd ..
+	./config/setup.sh --force --silent
+#	cd setup
+#	./setup.sh -c
+#	cd ..
 	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
@@ -650,7 +652,7 @@ if [ $owncrack = y ]; then
 	if [ ! -d brut3k1t ]; then
 	git clone https://github.com/ex0dus-0x/brut3k1t.git
 	cd brut3k1t
-	pip install -r requirements.txt
+	python setup.py install
 	cd ..
 	fi
 	## Dagon Hash Manipulator
@@ -825,7 +827,7 @@ if [ $cmsattack = y ]; then
 	fi
 	#2.D-Tect.
         if [ ! -d D-TECT ]; then
-        git clone https://github.com/shawarkhanethicalhacker/D-TECT.git
+	git clone https://github.com/bibortone/D-Tech
 	cd D-TECT
 	chmod +x d-tect.py
 	cd ..
