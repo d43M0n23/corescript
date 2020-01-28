@@ -619,8 +619,9 @@ if [ $botnet = y ]; then
 	fi
 	## Xerxes
 	if [ ! -d xerxes ]; then
-	git clone https://github.com/zanyarjamal/xerxes.git
-	cd xerxes
+#	git clone https://github.com/zanyarjamal/xerxes.git
+	git clone https://github.com/sepehrdaddev/Xerxes.git
+	cd Xerxes
 	gcc xerxes.c -o xerxes
 	cd ..
 	fi
@@ -887,7 +888,7 @@ read -p "Create the d43M0n23-Sync script (y/n)? " syncscript
 
 if [ $syncscript = y ]; then
 cat << EOF > /root/sync 
-rsync -arvz --exclude-from 'exclude-list.txt' -e 'ssh -p 2322' root@3xpl0it.com:/home/infinity/99-Hack/ /root/c0r3/04-h4cK3D/
+rsync -arvz --exclude-from 'exclude-list.txt' -e 'ssh -p 2322' root@3xpl0it.ddns.net:/home/infinity/99-Hack/ /root/c0r3/04-h4cK3D/
 chown -R root:root /root/c0r3/04-h4cK3D/
 chmod -R 644 /root/c0r3/04-h4cK3D
 if [ -d /root/Bilder ]; then

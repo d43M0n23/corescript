@@ -70,17 +70,19 @@ if ! hash wondershaper 2>/dev/null; then sudo apt-get update && apt-get upgrade 
 sh_stage1 () {
 echo -e "Shape Settings Vornehmen:";
 read -p "Interface: " interface;
-read -p "Download-Speed in Mbit/s: " download
-read -p "Upload-Speed in Mbit/s: " upload
-wondershaper $interface ${download}000 ${upload}000
-echo -e "Interface ${interface} wurde mit Download: ${download} Mbit/s und Upload: ${upload} limitiert."
+read -p "Download-Speed in Mbit/s: " download;
+read -p "Upload-Speed in Mbit/s: " upload;
+downloadx=$download*1000;
+uploadx=$upload*1000;
+wondershaper $interface $downloadx $uploadx
+echo -e "Interface ${interface} wurde mit Download: ${download} Mbit/s und Upload: ${upload} Mbit/s limitiert."
 sleep 3
 }
 
 sh_stage2 () {
 echo -e "Geshaptes Interface reseten:"
 read -p "Interface: " interface
-wondershaper remove $interface
+wondershaper clean $interface
 echo -e "${interface} wurde reseted."
 sleep 3
 }
