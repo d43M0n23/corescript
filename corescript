@@ -8,8 +8,8 @@
 # include Nessus,OpenVas
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
-version=v1.0.0
-vdate=15.03.2019
+version=v1.0.1
+vdate=06.02.2020
 
 ####################
 # CONFIG THIS PART #
@@ -562,6 +562,24 @@ echo '+-------------------------------------------------+'
 #read TASTE
 fi
 
+#23.HiddenEye.
+if [ ! -d HiddenEye ]; then
+        git clone https://github.com/DarkSecDevelopers/HiddenEye.git
+	chmod 777 HiddenEye
+	apt install python3-pip
+	cd HiddenEye
+	pip3 install -r requirements.txt
+	pip3 install requests
+	python3 HiddenEye.py
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| HiddenEye geladen und installiert               |'
+echo '+-------------------------------------------------+'
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
+fi
+
 
 #02-workspace
 cd /root/${main}/${space}/
@@ -932,12 +950,12 @@ if [ $sshkey = y ]; then
 fi
 fi
 # Grub boot logo
-read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
+#read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
 
-if [ $grubscreen = y ]; then
-cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
-echo "Grub-Screen created!"
-fi
+#if [ $grubscreen = y ]; then
+#cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
+#echo "Grub-Screen created!"
+#fi
 
 # Github Core Script
 read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
@@ -949,6 +967,24 @@ wget http://d43m0n23.com/c0r3/d43M0n23_gitmaster.sh
 cd ..
 chmod +x /root/Downloads/d43M0n23_gitmaster.sh
 echo 'tHanks d43M0n23_gitmaster initialized ;)'
+fi
+
+# XRDP
+read -p "Enable XRDP (y/n)? " xrdp
+
+if [ $xrdp = y ]; then
+#cat << EOF > /root/r3s0luti0n_vm
+#apt-get install -y linux-headers-$(uname -r)
+#cd /media/cdrom/
+#sh VBoxLinuxAdditions.run
+#echo 'tHanks Reb00t'
+##reboot
+#EOF
+apt-get install xrdp tigervnc-standalone-server -y
+#tightvncpasswd
+update-rc.d xrdp enable
+systemctl enable xrdp-sesman.service
+echo "XRDP aktiv!"
 fi
 
 #Final MSG
