@@ -628,6 +628,7 @@ echo '| Botnet-Install                                  |'
 echo '+-------------------------------------------------+'
 echo '| 1.Ufonet.                                       |'
 echo '| 2.Xerxes.                                       |'
+echo '| 3.DDosTor.                                      |'
 echo '+-------------------------------------------------+'
 read -p "Download Botnet (y/n)? " botnet
 ##
@@ -646,6 +647,12 @@ if [ $botnet = y ]; then
 	gcc xerxes.c -o xerxes
 	cd ..
 	fi
+        ## DDosTor
+        if [ ! -d ddostor ]; then
+        git clone https://github.com/thelinuxchoice/ddostor.git
+        if ! hash tor 2>/dev/null; then sudo apt-get install --yes tor ; fi
+        fi
+
  echo 'Botnet installed - Job Done!'
 fi
 #sleep 3
@@ -846,7 +853,7 @@ if [ $cmsattack = y ]; then
 	fi
 	#2.D-Tect.
         if [ ! -d D-TECT ]; then
-	git clone https://github.com/bibortone/D-Tech
+	git clone https://github.com/bibortone/D-Tech.git
 	cd D-TECT
 	chmod +x d-tect.py
 	cd ..
@@ -979,6 +986,16 @@ apt-get install xrdp tigervnc-standalone-server -y
 update-rc.d xrdp enable
 systemctl enable xrdp-sesman.service
 echo "XRDP aktiv!"
+fi
+
+# NTPD
+read -p "Enable NTPD (y/n)? " xrdp
+
+if [ $xrdp = y ]; then
+apt-get install ntpdate -y
+update-rc.d ntp enable
+systemctl enable ntp
+echo "NTPD aktiv!"
 fi
 
 #Final MSG
