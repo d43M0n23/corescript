@@ -149,6 +149,7 @@ echo '| 20.Debinject.                                   |'
 echo '| 21.BruteX.                                      |'
 echo '| 22.RivIP-PHP.                                   |'
 echo '| 23.Hidden-Eye.                                  |'
+echo '| 24.OneX.                                        |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -572,6 +573,20 @@ if [ ! -d HiddenEye ]; then
 	pip3 install -r requirements.txt
 	pip3 install requests
 	python3 HiddenEye.py
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| HiddenEye geladen und installiert               |'
+echo '+-------------------------------------------------+'
+#echo '| to continue press Return                        |'
+#echo '+-------------------------------------------------+'
+#read TASTE
+fi
+
+#24.OneX.
+if [ ! -d onex ]; then
+        git clone https://github.com/Rajkumrdusad/onex.git
+        chmod +x onex/install
+        sh onex/install
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| HiddenEye geladen und installiert               |'
