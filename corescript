@@ -148,6 +148,7 @@ echo '| 19.AngryFuzzer.                                 |'
 echo '| 20.Debinject.                                   |'
 echo '| 21.BruteX.                                      |'
 echo '| 22.RivIP-PHP.                                   |'
+echo '| 23.Hidden-Eye.                                  |'
 echo '+-------------------------------------------------+'
 read -p "Make a source deb-update (y/n)? " debupdate
 ##
@@ -973,13 +974,6 @@ fi
 read -p "Enable XRDP (y/n)? " xrdp
 
 if [ $xrdp = y ]; then
-#cat << EOF > /root/r3s0luti0n_vm
-#apt-get install -y linux-headers-$(uname -r)
-#cd /media/cdrom/
-#sh VBoxLinuxAdditions.run
-#echo 'tHanks Reb00t'
-##reboot
-#EOF
 apt-get install xrdp tigervnc-standalone-server -y
 #tightvncpasswd
 update-rc.d xrdp enable
