@@ -583,13 +583,13 @@ echo '+-------------------------------------------------+'
 fi
 
 #24.OneX.
-if [ ! -d onex ]; then
+if ! hash onex 2>/dev/null; then
         git clone https://github.com/Rajkumrdusad/onex.git
         chmod +x onex/install
         sh onex/install
 sleep 3
 echo '+-------------------------------------------------+'
-echo '| HiddenEye geladen und installiert               |'
+echo '| OneX geladen und installiert                    |'
 echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
@@ -718,7 +718,7 @@ if [ $owncrack = y ]; then
         #chmod +x pybozocrack.py
         #cd ..
         fi
-        if [ ! -d Hash-Buster ]; then
+        if [ ! -d cupp ]; then
         ## Cupp
         git clone https://github.com/Mebus/cupp.git
         fi
@@ -875,7 +875,7 @@ if [ $cmsattack = y ]; then
 	#2.D-Tect.
         if [ ! -d D-TECT ]; then
 	git clone https://github.com/bibortone/D-Tech.git
-	cd D-TECT
+	cd D-Tech
 	chmod +x d-tect.py
 	cd ..
         echo '+-------------------------------------------------+'
