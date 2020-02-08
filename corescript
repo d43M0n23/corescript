@@ -683,6 +683,7 @@ echo '| 1.brut3k1t.                                     |'
 echo '| 2.dagon.                                        |'
 echo '| 3.PyBozoCrack.                                  |'
 echo '| 4.Hash Buster.                                  |'
+echo '| 5.Cupp. - User Password Profiler                |'
 echo '+-------------------------------------------------+'
 read -p "Download Crack Engines (y/n)? " owncrack
 ##
@@ -717,6 +718,11 @@ if [ $owncrack = y ]; then
         #chmod +x pybozocrack.py
         #cd ..
         fi
+        if [ ! -d Hash-Buster ]; then
+        ## Cupp
+        git clone https://github.com/Mebus/cupp.git
+        fi
+
 echo 'Cracker installed - Job Done!'
 fi
 #sleep 3
