@@ -760,10 +760,9 @@ if [ $wifiattack = y ]; then
 	fi
 	## Fluxon
 	if [ ! -d fluxon ]; then
-	apt-get -y install build-essential libpcap-dev libssl1.0-dev aircrack-ng pixiewps
-	git clone https://github.com/wi-fi-analyzer/fluxion.git
+	git clone https://www.github.com/FluxionNetwork/fluxion.git
         echo '+-------------------------------------------------+'
-        echo '| Fluxon Installed                                |'
+        echo '| Fluxion Installed                               |'
         echo '+-------------------------------------------------+'
 	fi
 	## NETATTACK 1
