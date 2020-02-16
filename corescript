@@ -979,12 +979,12 @@ if [ $sshkey = y ]; then
 fi
 fi
 # Grub boot logo
-#read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
+read -p "Create the d43M0n23-Grub-Screen (y/n)? " grubscreen
 
-#if [ $grubscreen = y ]; then
-#cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /usr/share/desktop-base/kali-theme/grub/grub-16x9.png
-#echo "Grub-Screen created!"
-#fi
+if [ $grubscreen = y ]; then
+cp -r /root/c0r3/04-h4cK3D/walls/kali-grub.png /boot/grub/themes/kali/grub-16x9.png
+echo "Grub-Screen created!"
+fi
 
 # Github Core Script
 read -p "Create the d43M0n23-Github-Script (y/n)? " gitscript
