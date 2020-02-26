@@ -1008,6 +1008,16 @@ systemctl enable xrdp-sesman.service
 echo "XRDP aktiv!"
 fi
 
+
+# XRDP-Client
+read -p "Install XRDP Client KRDC (y/n)? " krdc
+
+if [ $krdc = y ]; then
+apt-get install krdc -y
+echo "XRDP-Client installiert!"
+fi
+
+
 # NTPD
 read -p "Enable NTPD (y/n)? " xrdp
 
