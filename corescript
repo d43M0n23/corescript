@@ -612,26 +612,29 @@ read -p "Download Sources from Git to Build (y/n)? " ownbuild
 ## Schleife
 ##
 if [ $ownbuild = y ]; then
-        apt-get update && apt-get upgrade -y
-        apt-get dist-upgrade -y
-        apt autoremove -y
-        apt-get clean
+#        apt-get update && apt-get upgrade -y
+#        apt-get dist-upgrade -y
+#        apt autoremove -y
+#        apt-get clean
 	## KALI CD
 	if [ ! -d live-build-config ]; then
-        apt-get install git live-build cdebootstrap devscripts -y
-        git clone git://git.kali.org/live-build-config.git
-	apt-get source debian-installer
+        apt install -y curl git live-build cdebootstrap
+        git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
+#	apt-get source debian-installer
 	fi
 	## KALI Nethunter
 	if [ ! -d kali-nethunter ]; then
-	git clone https://github.com/offensive-security/kali-nethunter.git
+	git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project.git
 	fi
 	## KALI ARM Build like Raspberry
 	if [ ! -d kali-arm-build-scripts ]; then
-	git clone https://github.com/offensive-security/kali-arm-build-scripts.git
-	apt-get install gcc-arm-none-eabi
-	dpkg --add-architecture i386
-	apt-get install -y git-core gnupg flex bison gperf libesd0-dev build-essential zip curl libncurses5-dev zlib1g-dev libncurses5-dev gcc-multilib g++-multilib parted kpartx debootstrap pixz qemu-user-static abootimg cgpt vboot-kernel-utils vboot-utils bc lzma lzop xz-utils automake autoconf m4 dosfstools rsync u-boot-tools schedtool git e2fsprogs device-tree-compiler ccache dos2unix debootstrap libgmp3-dev:i386 libgmp3-dev
+	git clone https://gitlab.com/kalilinux/build-scripts/kali-arm.git
+	cd kali-arm
+	./build-deps.sh
+	cd ..
+	#apt-get install gcc-arm-none-eabi
+	#dpkg --add-architecture i386
+	#apt-get install -y git-core gnupg flex bison gperf libesd0-dev build-essential zip curl libncurses5-dev zlib1g-dev libncurses5-dev gcc-multilib g++-multilib parted kpartx debootstrap pixz qemu-user-static abootimg cgpt vboot-kernel-utils vboot-utils bc lzma lzop xz-utils automake autoconf m4 dosfstools rsync u-boot-tools schedtool git e2fsprogs device-tree-compiler ccache dos2unix debootstrap libgmp3-dev:i386 libgmp3-dev
 	fi
 fi
 cd ..
