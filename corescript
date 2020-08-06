@@ -846,8 +846,8 @@ if [ $wifiattack = y ]; then
         echo '| Wifite v.2 Installed                            |'
         echo '+-------------------------------------------------+'
         fi
-        #Wifit
-        if [ ! -d wifite2 ]; then
+        #Lazy
+        if [ ! -d lscript ]; then
         git https://github.com/arismelachroinos/lscript.git
         cd lscript
 	chmod +x install.sh
