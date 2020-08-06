@@ -848,7 +848,7 @@ if [ $wifiattack = y ]; then
         fi
         #Lazy
         if [ ! -d lscript ]; then
-        git https://github.com/arismelachroinos/lscript.git
+        git clone https://github.com/arismelachroinos/lscript.git
         cd lscript
 	chmod +x install.sh
 	./install.sh
