@@ -8,8 +8,8 @@
 # include Nessus,OpenVas
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
-version=v1.0.1
-vdate=06.02.2020
+version=v1.0.2
+vdate=06.08.2020
 
 ####################
 # CONFIG THIS PART #
@@ -748,6 +748,7 @@ echo '| 7.Ghost-Phisher.                                |'
 echo '| 8.MDK3 AP.                                      |'
 echo '| 9.Airgeddon.                                    |'
 echo '| 10.Wifite v.2.                                  |'
+echo '| 11.LazyScript.                                  |'
 echo '+-------------------------------------------------+'
 read -p "Download Wifi Attack Tools (y/n)? " wifiattack
 ##
@@ -835,7 +836,7 @@ if [ $wifiattack = y ]; then
         echo '| Airgeddon Installed                             |'
         echo '+-------------------------------------------------+'
 	fi
-        #Airgeddon
+        #Wifite
         if [ ! -d wifite2 ]; then
         git clone https://github.com/derv82/wifite2.git
         cd wifite2
@@ -843,6 +844,18 @@ if [ $wifiattack = y ]; then
         cd ..
         echo '+-------------------------------------------------+'
         echo '| Wifite v.2 Installed                            |'
+        echo '+-------------------------------------------------+'
+        fi
+        #Wifit
+        if [ ! -d wifite2 ]; then
+        git https://github.com/arismelachroinos/lscript.git
+        cd lscript
+	chmod +x install.sh
+	./install.sh
+        chmod +x Wifite2.py
+        cd ..
+        echo '+-------------------------------------------------+'
+        echo '| LazyScritp Installed                            |'
         echo '+-------------------------------------------------+'
         fi
 
