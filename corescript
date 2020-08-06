@@ -1,5 +1,5 @@
 #!/bin/bash
-# corescript v1.0.1
+# corescript v1.0.2
 # create folder and subs
 # include Frames,Aux;Attack
 #
@@ -852,7 +852,6 @@ if [ $wifiattack = y ]; then
         cd lscript
 	chmod +x install.sh
 	./install.sh
-        chmod +x Wifite2.py
         cd ..
         echo '+-------------------------------------------------+'
         echo '| LazyScritp Installed                            |'
