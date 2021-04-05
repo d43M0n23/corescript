@@ -324,7 +324,7 @@ fi
 apt-get install bettercap -y
 sleep 3
 echo '+-------------------------------------------------+'
-echo '| Pybelt geladen und installiert                  |'
+echo '| Bettercap MitM geladen und installiert          |'
 echo '+-------------------------------------------------+'
 
 
@@ -378,6 +378,7 @@ fi
 
 #9.TheFatRat.
 if [ ! -d TheFatRat ]; then
+apt-get install mingw-w64 -y
 git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
 chmod +x setup.sh && ./setup.sh
@@ -392,21 +393,21 @@ echo '+-------------------------------------------------+'
 fi
 
 #10.Trity.
-if [ ! -d Trity ]; then
-#git clone https://github.com/toxic-ig/Trity.git
-git clone https://github.com/S4Y4N/Trity.git
-cd Trity
-python install.py
-cd ..
+#if [ ! -d Trity ]; then
+##git clone https://github.com/toxic-ig/Trity.git
+#git clone https://github.com/S4Y4N/Trity.git
+#cd Trity
+#python install.py
+#cd ..
 
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Trity geladen und installiert                   |'
-echo '+-------------------------------------------------+'
+#sleep 3
+#echo '+-------------------------------------------------+'
+#echo '| Trity geladen und installiert                   |'
+#echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
-fi
+#fi
 
 #11.Webpwn3r.
 if [ ! -d webpwn3r ]; then
