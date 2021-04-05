@@ -271,10 +271,11 @@ fi
 #3.Getsploit.
 
 if [ ! -d getsploit ]; then
-git clone https://github.com/vulnersCom/getsploit.git
-cd getsploit
-python setup.py
-cd ..
+pip install getsploit
+#git clone https://github.com/vulnersCom/getsploit.git
+#cd getsploit
+#python setup.py
+#cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Getsploit geladen und installiert               |'
