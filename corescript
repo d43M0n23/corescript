@@ -452,20 +452,20 @@ echo '+-------------------------------------------------+'
 fi
 
 #14.Xsscrapy.
-if [ ! -d xsscrapy ]; then
-git clone https://github.com/DanMcInerney/xsscrapy.git
-cd xsscrapy
-pip install -r requirements.txt
-python xsscrapy.py -h
-cd ..
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Xss-Crapy geladen und installiert               |'
-echo '+-------------------------------------------------+'
+#if [ ! -d xsscrapy ]; then
+#git clone https://github.com/DanMcInerney/xsscrapy.git
+#cd xsscrapy
+#pip install -r requirements.txt
+#python xsscrapy.py -h
+#cd ..
+#sleep 3
+#echo '+-------------------------------------------------+'
+#echo '| Xss-Crapy geladen und installiert               |'
+#echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
-fi
+#fi
 
 #15.Red-Hawk.
 if [ ! -d RED_HAWK ]; then
@@ -482,13 +482,11 @@ fi
 
 #16.Veil-Framework.
 if [ ! -d Veil ]; then
-        git clone https://github.com/Veil-Framework/Veil.git
-	cd Veil/
-	./config/setup.sh --force --silent
-#	cd setup
-#	./setup.sh -c
+apt-get install veil -y
+#       git clone https://github.com/Veil-Framework/Veil.git
+#	cd Veil/
+#	./config/setup.sh --force --silent
 #	cd ..
-	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Veil-Framework geladen und installiert          |'
@@ -588,6 +586,7 @@ if [ ! -d HiddenEye ]; then
 	pip3 install -r requirements.txt
 	pip3 install requests
 	python3 HiddenEye.py
+	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| HiddenEye geladen und installiert               |'
