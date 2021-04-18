@@ -9,7 +9,7 @@
 # https://3xpl0it.com/c0r3/Nessus-6.10.5-debian6_amd64.deb
 ##################
 version=v1.0.2
-vdate=06.08.2020
+vdate=18.04.2021
 
 ####################
 # CONFIG THIS PART #
@@ -662,13 +662,10 @@ if [ $botnet = y ]; then
 	if [ ! -d xerxes ]; then
 #	git clone https://github.com/zanyarjamal/xerxes.git
 	git clone https://github.com/sepehrdaddev/Xerxes.git
-	cd Xerxes
-	gcc xerxes.c -o xerxes
-	cd ..
 	fi
         ## DDosTor
         if [ ! -d ddostor ]; then
-        git clone https://github.com/thelinuxchoice/ddostor.git
+        git clone https://github.com/enforcer-pro/ddostor.git
         if ! hash tor 2>/dev/null; then sudo apt-get install --yes tor ; fi
         fi
 
