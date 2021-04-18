@@ -130,7 +130,8 @@ echo '| 1.Arachni.                                      |'
 echo '| 2.Nessus.                                       |'
 echo '| 3.Getsploit.                                    |'
 echo '| 4.Katana-Framework.                             |'
-echo '| 5.MITMf.                                        |'
+echo '| 5.Bettercap.                                    |'
+#echo '| 5.MITMf.                                        |'
 echo '| 6.Pybelt.                                       |'
 echo '| 7.Scanner-Inurl-BR.                             |'
 echo '| 8.Sn1per.                                       |'
@@ -289,6 +290,10 @@ fi
 
 if [ ! -d KatanaFramework ]; then
 git clone 'https://github.com/PowerScript/KatanaFramework.git'
+cd KatanaFramework
+sh dependencies
+python install
+cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Katana geladen und installiert                  |'
@@ -300,20 +305,28 @@ fi
 
 #5.MITMf.
 
-if [ ! -d MITMf ]; then
-apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file -y
-git clone https://github.com/byt3bl33d3r/MITMf
-cd MITMf
-git submodule init && git submodule update --recursive
-cd ..
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| MITMf geladen und installiert                   |'
-echo '+-------------------------------------------------+'
+#if [ ! -d MITMf ]; then
+#apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file -y
+#git clone https://github.com/byt3bl33d3r/MITMf
+#cd MITMf
+#git submodule init && git submodule update --recursive
+#cd ..
+#sleep 3
+#echo '+-------------------------------------------------+'
+#echo '| MITMf geladen und installiert                   |'
+#echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
-fi
+#fi
+
+#5.Bettercap
+apt-get install bettercap -y
+sleep 3
+echo '+-------------------------------------------------+'
+echo '| Bettercap MitM geladen und installiert          |'
+echo '+-------------------------------------------------+'
+
 
 #6.Pybelt.
 
@@ -365,6 +378,7 @@ fi
 
 #9.TheFatRat.
 if [ ! -d TheFatRat ]; then
+apt-get install mingw-w64 -y
 git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
 chmod +x setup.sh && ./setup.sh
@@ -379,21 +393,21 @@ echo '+-------------------------------------------------+'
 fi
 
 #10.Trity.
-if [ ! -d Trity ]; then
-#git clone https://github.com/toxic-ig/Trity.git
-git clone https://github.com/S4Y4N/Trity.git
-cd Trity
-python install.py
-cd ..
+#if [ ! -d Trity ]; then
+##git clone https://github.com/toxic-ig/Trity.git
+#git clone https://github.com/S4Y4N/Trity.git
+#cd Trity
+#python install.py
+#cd ..
 
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Trity geladen und installiert                   |'
-echo '+-------------------------------------------------+'
+#sleep 3
+#echo '+-------------------------------------------------+'
+#echo '| Trity geladen und installiert                   |'
+#echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
-fi
+#fi
 
 #11.Webpwn3r.
 if [ ! -d webpwn3r ]; then
@@ -438,20 +452,20 @@ echo '+-------------------------------------------------+'
 fi
 
 #14.Xsscrapy.
-if [ ! -d xsscrapy ]; then
-git clone https://github.com/DanMcInerney/xsscrapy.git
-cd xsscrapy
-pip install -r requirements.txt
-python xsscrapy.py -h
-cd ..
-sleep 3
-echo '+-------------------------------------------------+'
-echo '| Xss-Crapy geladen und installiert               |'
-echo '+-------------------------------------------------+'
+#if [ ! -d xsscrapy ]; then
+#git clone https://github.com/DanMcInerney/xsscrapy.git
+#cd xsscrapy
+#pip install -r requirements.txt
+#python xsscrapy.py -h
+#cd ..
+#sleep 3
+#echo '+-------------------------------------------------+'
+#echo '| Xss-Crapy geladen und installiert               |'
+#echo '+-------------------------------------------------+'
 #echo '| to continue press Return                        |'
 #echo '+-------------------------------------------------+'
 #read TASTE
-fi
+#fi
 
 #15.Red-Hawk.
 if [ ! -d RED_HAWK ]; then
@@ -468,13 +482,11 @@ fi
 
 #16.Veil-Framework.
 if [ ! -d Veil ]; then
-        git clone https://github.com/Veil-Framework/Veil.git
-	cd Veil/
-	./config/setup.sh --force --silent
-#	cd setup
-#	./setup.sh -c
+apt-get install veil -y
+#       git clone https://github.com/Veil-Framework/Veil.git
+#	cd Veil/
+#	./config/setup.sh --force --silent
 #	cd ..
-	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| Veil-Framework geladen und installiert          |'
@@ -574,6 +586,7 @@ if [ ! -d HiddenEye ]; then
 	pip3 install -r requirements.txt
 	pip3 install requests
 	python3 HiddenEye.py
+	cd ..
 sleep 3
 echo '+-------------------------------------------------+'
 echo '| HiddenEye geladen und installiert               |'
